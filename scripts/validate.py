@@ -36,6 +36,10 @@ SECRET_PATTERNS = [
     r"ghp_[A-Za-z0-9_]{20,}",
     r"github_pat_[A-Za-z0-9_]{20,}",
 ]
+VERIFICATION_FILE_PATTERNS = [
+    r"google[a-z0-9]+\.html",
+    r"BingSiteAuth\.xml",
+]
 
 
 class LinkParser(HTMLParser):
@@ -176,7 +180,14 @@ def internal_target_exists(dist, current_file, href):
 
 
 def validate_dist(errors, dist):
-    html_files = list(dist.rglob("*.html"))
+    html_files = []
+    for file in dist.rglob("*.html"):
+        rel = file.relative_to(dist).as_posix()
+        is_root_file = "/" not in rel
+        is_verification_file = any(re.fullmatch(pattern, rel) for pattern in VERIFICATION_FILE_PATTERNS)
+        if is_root_file and is_verification_file:
+            continue
+        html_files.append(file)
     if not html_files:
         fail(errors, "no generated html files")
         return
