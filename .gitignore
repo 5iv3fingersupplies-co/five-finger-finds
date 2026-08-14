@@ -1,6 +1,7 @@
 site/
 reports/
 work/
+private-inputs/
 *.pyc
 __pycache__/
 .DS_Store

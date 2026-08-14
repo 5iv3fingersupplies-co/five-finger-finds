@@ -40,6 +40,16 @@ class SiteBuildTest(unittest.TestCase):
         self.assertIn("tag=fivefingersup-20", html)
         self.assertIn('rel="sponsored nofollow noopener"', html)
 
+    def test_optimization_report_runs(self):
+        subprocess.run([sys.executable, "scripts/optimize.py", "--out", "reports"], cwd=ROOT, check=True)
+        report_path = ROOT / "reports/optimization-report.json"
+        report = json.loads(report_path.read_text(encoding="utf-8"))
+        self.assertEqual(report["status"], "ok")
+        self.assertEqual(report["cost"]["incremental_usd"], 0)
+        self.assertFalse(report["cost"]["paid_apis_used"])
+        self.assertGreaterEqual(len(report["top_page_actions"]), 10)
+        self.assertGreaterEqual(len(report["content_gap_actions"]), 5)
+
 
 if __name__ == "__main__":
     unittest.main()

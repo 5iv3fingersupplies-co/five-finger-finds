@@ -1,0 +1,32 @@
+name: Optimization Report
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: "31 15 * * 2"
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out public site source
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run autonomous maintenance
+        run: python scripts/maintenance.py --out reports
+      - name: Build static site
+        run: python scripts/build.py --out site --automation-report reports/automation-report.json
+      - name: Validate generated site
+        run: python scripts/validate.py --dist site
+      - name: Run optimization report
+        run: python scripts/optimize.py --out reports
+      - name: Publish report summary
+        run: cat reports/optimization-report.md >> "$GITHUB_STEP_SUMMARY"

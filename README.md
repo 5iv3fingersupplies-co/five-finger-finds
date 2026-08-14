@@ -28,6 +28,26 @@ python -m unittest discover -s tests
 
 Place public site-verification files such as `google123abc.html` or `BingSiteAuth.xml` in `static-root/`. The build copies non-hidden files from that folder into the deployed site root so URL-prefix verification can find them under `https://5iv3fingersupplies-co.github.io/five-finger-finds/`.
 
+## Optimization loop
+
+The `Optimization Report` workflow runs weekly and on manual dispatch. It performs a $0 deterministic analysis of page structure, source coverage, recommendation slots, category depth, and content gaps, then writes a Markdown summary into the GitHub Actions run summary.
+
+Private performance exports can be analyzed locally without committing them. Put optional CSV exports in gitignored `private-inputs/` using any of these names:
+
+- `search-console-pages.csv`
+- `search-console-queries.csv`
+- `bing-pages.csv`
+- `bing-queries.csv`
+- `amazon-associates.csv`
+
+Then run:
+
+```powershell
+python scripts/optimize.py --out reports
+```
+
+The report ranks pages and topics by likely next-best work. It does not call paid APIs, does not require analytics scripts, and does not publish private export data.
+
 ## Public safety
 
 This repository is meant to contain only static-site code, public source records, templates, and generated output rules. Do not commit `.env` files, API keys, private JARVIS/core code, browser profiles, logs, customer data, or private company documents.

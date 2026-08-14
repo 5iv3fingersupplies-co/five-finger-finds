@@ -108,6 +108,7 @@ def validate_data(errors):
     tools = load("tools.json")
     pages = load("pages.json")
     recs = load("recommendations.json")
+    topics = load("optimization_topics.json")
 
     if automation.get("max_incremental_cost_usd") != 0:
         fail(errors, "automation cost cap is not fixed at 0")
@@ -153,6 +154,17 @@ def validate_data(errors):
             score = jaccard(fp_a, fp_b)
             if score > 0.72:
                 fail(errors, f"possible duplicate content: {slug_a} and {slug_b} ({score:.2f})")
+
+    recommendation_ids = {item["id"] for item in recs}
+    for topic in topics:
+        if not topic.get("source_ids"):
+            fail(errors, f"optimization topic missing source evidence: {topic.get('id', 'unknown')}")
+        for source_id in topic.get("source_ids", []):
+            if source_id not in sources:
+                fail(errors, f"optimization topic {topic['id']} references unknown source {source_id}")
+        for rec_id in topic.get("recommendation_ids", []):
+            if rec_id not in recommendation_ids:
+                fail(errors, f"optimization topic {topic['id']} references unknown recommendation {rec_id}")
 
 
 def internal_target_exists(dist, current_file, href):
@@ -225,6 +237,8 @@ def validate_workflows(errors):
         fail(errors, "no GitHub Pages deploy action")
     if "python scripts/maintenance.py" not in text:
         fail(errors, "maintenance script not wired into workflow")
+    if "python scripts/optimize.py" not in text:
+        fail(errors, "optimization script not wired into workflow")
 
 
 def scan_repo_secrets(errors):
@@ -232,7 +246,7 @@ def scan_repo_secrets(errors):
         if not path.is_file():
             continue
         rel = path.relative_to(ROOT).as_posix()
-        if rel.startswith(".git/") or rel.startswith("site/"):
+        if rel.startswith((".git/", "site/", "private-inputs/")):
             continue
         if Path(rel).name.startswith(".env"):
             fail(errors, f"env file present: {rel}")

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "emergency-cooking-without-power",
+    "category": "Emergency Prep",
+    "priority": 9,
+    "suggested_slug": "emergency-cooking-without-power",
+    "title": "Emergency Cooking Without Power",
+    "reason": "Complements outage, water, food-safety, and household kit content with practical product-fit decisions.",
+    "coverage_terms": ["emergency cooking", "camp stove", "no power cooking", "safe cooking"],
+    "source_ids": ["ready_kit", "ready_power_outages"],
+    "recommendation_ids": ["water_container", "first_aid_kit", "storage_bins"]
+  },
+  {
+    "id": "home-battery-vs-power-bank",
+    "category": "Portable Power",
+    "priority": 9,
+    "suggested_slug": "home-battery-vs-power-bank",
+    "title": "Home Battery vs Power Bank",
+    "reason": "Targets a common buyer confusion between phone banks and larger portable power stations.",
+    "coverage_terms": ["home battery", "power bank vs power station", "portable power station"],
+    "source_ids": ["ready_power_outages", "faa_lithium", "usb_pd"],
+    "recommendation_ids": ["compact_power_bank", "laptop_power_bank", "camp_battery"]
+  },
+  {
+    "id": "apartment-power-outage-kit",
+    "category": "Household",
+    "priority": 8,
+    "suggested_slug": "apartment-power-outage-kit",
+    "title": "Apartment Power-Outage Kit",
+    "reason": "Narrows broad emergency-prep guidance into a storage-limited household workflow.",
+    "coverage_terms": ["apartment power outage", "small apartment outage", "apartment emergency kit"],
+    "source_ids": ["ready_power_outages", "ready_kit"],
+    "recommendation_ids": ["lantern_usb", "battery_fan", "weather_radio_product"]
+  },
+  {
+    "id": "road-trip-phone-power-plan",
+    "category": "Auto",
+    "priority": 8,
+    "suggested_slug": "road-trip-phone-power-plan",
+    "title": "Road-Trip Phone Power Plan",
+    "reason": "Connects auto-kit and portable-power pages around a high-intent travel use case.",
+    "coverage_terms": ["road trip phone power", "car phone charging", "road trip power bank"],
+    "source_ids": ["ready_car", "faa_lithium", "usb_pd"],
+    "recommendation_ids": ["compact_power_bank", "usb_c_charger", "roadside_kit"]
+  },
+  {
+    "id": "carry-on-charging-kit",
+    "category": "Travel",
+    "priority": 8,
+    "suggested_slug": "carry-on-charging-kit",
+    "title": "Carry-On Charging Kit",
+    "reason": "Pairs luggage and battery rules with concrete organizer/product decisions.",
+    "coverage_terms": ["carry-on charging kit", "travel charging kit", "airport charging kit"],
+    "source_ids": ["tsa_bring", "faa_lithium", "usb_pd"],
+    "recommendation_ids": ["compact_power_bank", "usb_c_charger", "packing_cubes"]
+  },
+  {
+    "id": "garage-storage-for-emergency-supplies",
+    "category": "Household",
+    "priority": 7,
+    "suggested_slug": "garage-storage-for-emergency-supplies",
+    "title": "Garage Storage for Emergency Supplies",
+    "reason": "Expands supply planning into organization products while keeping safety and rotation visible.",
+    "coverage_terms": ["garage emergency supplies", "emergency supply storage", "garage storage bins"],
+    "source_ids": ["ready_kit", "ready_water"],
+    "recommendation_ids": ["storage_bins", "notebook_labels", "water_container"]
+  },
+  {
+    "id": "camping-air-pump-power-plan",
+    "category": "Camping",
+    "priority": 7,
+    "suggested_slug": "camping-air-pump-power-plan",
+    "title": "Camping Air-Pump Power Plan",
+    "reason": "Connects the air-pump selector to camping power decisions and rechargeable gear.",
+    "coverage_terms": ["camping air pump battery", "air mattress pump camping", "rechargeable camping pump"],
+    "source_ids": ["nps_camping", "faa_lithium"],
+    "recommendation_ids": ["air_pump_high_volume", "camp_battery", "compact_power_bank"]
+  },
+  {
+    "id": "stroller-fan-safety-checklist",
+    "category": "Convenience",
+    "priority": 7,
+    "suggested_slug": "stroller-fan-safety-checklist",
+    "title": "Stroller Fan Safety Checklist",
+    "reason": "Builds from the fan-sizing tool into a narrower convenience-product decision page.",
+    "coverage_terms": ["stroller fan", "clip fan", "portable fan stroller"],
+    "source_ids": ["cdc_heat"],
+    "recommendation_ids": ["usb_fan", "battery_fan", "compact_power_bank"]
+  },
+  {
+    "id": "noaa-weather-radio-placement",
+    "category": "Emergency Prep",
+    "priority": 7,
+    "suggested_slug": "noaa-weather-radio-placement",
+    "title": "Weather Radio Placement at Home",
+    "reason": "Adds a practical page around alerting, placement, batteries, and household routines.",
+    "coverage_terms": ["weather radio placement", "NOAA weather radio home", "weather alert radio"],
+    "source_ids": ["weather_radio", "ready_kit"],
+    "recommendation_ids": ["weather_radio_product", "notebook_labels", "storage_bins"]
+  },
+  {
+    "id": "luggage-scale-before-airport",
+    "category": "Travel",
+    "priority": 6,
+    "suggested_slug": "luggage-scale-before-airport",
+    "title": "Use a Luggage Scale Before the Airport",
+    "reason": "Turns luggage sizing into a small, high-intent accessory decision.",
+    "coverage_terms": ["luggage scale", "weigh luggage", "packed bag weight"],
+    "source_ids": ["tsa_bring"],
+    "recommendation_ids": ["luggage_scale", "carry_on_luggage", "packing_cubes"]
+  }
+]
