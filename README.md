@@ -24,6 +24,10 @@ python scripts/validate.py --dist site
 python -m unittest discover -s tests
 ```
 
+## Search verification files
+
+Place public site-verification files such as `google123abc.html` or `BingSiteAuth.xml` in `static-root/`. The build copies non-hidden files from that folder into the deployed site root so URL-prefix verification can find them under `https://5iv3fingersupplies-co.github.io/five-finger-finds/`.
+
 ## Public safety
 
 This repository is meant to contain only static-site code, public source records, templates, and generated output rules. Do not commit `.env` files, API keys, private JARVIS/core code, browser profiles, logs, customer data, or private company documents.

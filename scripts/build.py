@@ -12,6 +12,7 @@ from urllib.parse import quote_plus
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 ASSETS = ROOT / "assets"
+STATIC_ROOT = ROOT / "static-root"
 
 
 def load_json(name: str):
@@ -379,6 +380,22 @@ def copy_assets(out):
     shutil.copytree(ASSETS, dest)
 
 
+def copy_static_root_files(out):
+    if not STATIC_ROOT.exists():
+        return
+    for source in STATIC_ROOT.rglob("*"):
+        if not source.is_file():
+            continue
+        rel_path = source.relative_to(STATIC_ROOT)
+        if any(part.startswith(".") for part in rel_path.parts):
+            continue
+        target = out / rel_path
+        if target.exists():
+            raise FileExistsError(f"static-root file would overwrite generated output: {rel_path}")
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(source, target)
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--out", default="site")
@@ -406,6 +423,7 @@ def main():
     paths = [str(p.relative_to(out)).replace("\\", "/") for p in out.rglob("*.html")]
     build_sitemap(out, site, paths)
     build_robots(out, site)
+    copy_static_root_files(out)
     print(json.dumps({"out": str(out), "tools": len(tools), "guides": len(guides), "html_pages": len(paths)}, indent=2))
 
 
