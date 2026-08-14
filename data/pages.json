@@ -1,0 +1,1050 @@
+[
+  {
+    "slug": "household-emergency-kit-without-clutter",
+    "title": "Household Emergency Kit Without Clutter",
+    "category": "Emergency Prep",
+    "description": "Build a kit around daily needs, storage limits, and refresh habits instead of buying a giant one-size bundle.",
+    "source_ids": [
+      "ready_kit",
+      "ready_water"
+    ],
+    "sections": [
+      {
+        "heading": "Start with household rhythm",
+        "body": "A useful kit is built around the people in the home, the rooms where supplies fit, and the habits that make rotation happen before items are forgotten.",
+        "bullets": [
+          "Group supplies by need: water, food, light, first aid, sanitation, communication, and documents.",
+          "Keep the first layer reachable from the main living area, not buried behind seasonal storage.",
+          "Use a printed inventory card so a family member can find supplies without an app."
+        ]
+      },
+      {
+        "heading": "Measure the kit before shopping",
+        "body": "Count the people, days, storage shelf depth, and container weight you can actually lift. Those numbers shape the container choice more than a giant bundle list.",
+        "bullets": [
+          "Choose several small containers if one heavy tote would be hard to move.",
+          "Mark expiration months on the outside where they are visible.",
+          "Leave room for household-specific items such as glasses, pet supplies, and medication notes."
+        ]
+      },
+      {
+        "heading": "What to buy only after measuring",
+        "body": "Buy items that close a gap in the plan. A flashlight, radio, water container, or first-aid kit is easier to justify when it has a named job.",
+        "bullets": [
+          "Prefer products with simple battery requirements and clear instructions.",
+          "Avoid mystery bundles where core item counts are hidden.",
+          "Store tools beside the supplies they support, such as a can opener near shelf-stable food."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "water-storage-planning-for-real-homes",
+    "title": "Water Storage Planning for Real Homes",
+    "category": "Emergency Prep",
+    "description": "Estimate water by people, days, pets, heat, and storage space, then choose containers you will actually rotate.",
+    "source_ids": [
+      "ready_water"
+    ],
+    "sections": [
+      {
+        "heading": "Use the gallon math first",
+        "body": "The planning baseline is one gallon per person per day, then the plan should adjust for heat, pets, medical needs, and how often containers can be rotated.",
+        "bullets": [
+          "Multiply people by days before choosing container size.",
+          "Add a pet buffer instead of assuming the human supply covers every use.",
+          "Split water across multiple locations if one closet is too warm or crowded."
+        ]
+      },
+      {
+        "heading": "Container fit matters",
+        "body": "Water is heavy, so container shape, handle design, and shelf height decide whether stored water remains practical.",
+        "bullets": [
+          "Measure the shelf or floor space before buying containers.",
+          "Choose containers that can be lifted safely when full.",
+          "Keep a smaller pour container near a larger storage container if the large one is hard to handle."
+        ]
+      },
+      {
+        "heading": "Rotation checklist",
+        "body": "A water plan needs a visible refresh routine. Without a date and location system, even a good container becomes easy to ignore.",
+        "bullets": [
+          "Label fill dates in large writing.",
+          "Keep containers away from fuels, cleaners, and heat sources.",
+          "Tie water checks to smoke-alarm checks or another household routine."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "power-outage-lighting-plan",
+    "title": "Power-Outage Lighting Plan",
+    "category": "Household",
+    "description": "Separate room lighting, task lighting, and alerting so an outage does not depend on one flashlight.",
+    "source_ids": [
+      "ready_power_outages",
+      "weather_radio"
+    ],
+    "sections": [
+      {
+        "heading": "Separate room light from task light",
+        "body": "A living room lantern, a hands-free headlamp, and a small bedside light solve different outage problems. Buying one bright item rarely covers every room well.",
+        "bullets": [
+          "Place a light where people gather.",
+          "Keep a headlamp or clip light for breaker panels and under-sink work.",
+          "Give each sleeping area a small light that can be found by touch."
+        ]
+      },
+      {
+        "heading": "Power source planning",
+        "body": "Lighting becomes easier when batteries, charging cables, and lamp types are standardized. Mixing many battery types makes maintenance harder.",
+        "bullets": [
+          "List each light and its battery or charging method.",
+          "Keep spare batteries in the same container as the lights.",
+          "For rechargeable lights, set a calendar reminder to top them off."
+        ]
+      },
+      {
+        "heading": "Alerting and visibility",
+        "body": "Outage lighting should also support communication and safety. A weather radio, reflective markers, and a simple flashlight can cover moments when phones are not enough.",
+        "bullets": [
+          "Keep one light with the weather radio.",
+          "Store a flashlight near exterior doors.",
+          "Avoid using candles as the primary lighting plan."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "phone-charging-during-outages",
+    "title": "Phone Charging During Outages",
+    "category": "Portable Power",
+    "description": "Plan charging around watt-hours, cables, and device priority instead of only counting ports.",
+    "source_ids": [
+      "ready_power_outages",
+      "usb_pd",
+      "faa_lithium"
+    ],
+    "sections": [
+      {
+        "heading": "Prioritize communication first",
+        "body": "During an outage, a phone is often a map, flashlight, alert receiver, and contact list. The charging plan should protect that role before powering comfort devices.",
+        "bullets": [
+          "Decide which phone gets charged first if power is limited.",
+          "Keep one cable per common connector in the kit.",
+          "Use airplane mode or low-power mode when charging resources are limited."
+        ]
+      },
+      {
+        "heading": "Translate capacity into watt-hours",
+        "body": "Power banks are easier to compare by watt-hours than by only counting milliamp-hours, especially when tablets or larger devices are involved.",
+        "bullets": [
+          "Write down the device battery size before choosing a bank.",
+          "Account for conversion loss rather than assuming perfect transfer.",
+          "Check USB-C Power Delivery needs for larger devices."
+        ]
+      },
+      {
+        "heading": "Storage and rotation",
+        "body": "A charged power bank is only useful if it can be found and has not been neglected for months.",
+        "bullets": [
+          "Store the bank with its cable.",
+          "Recharge backup banks on a recurring household date.",
+          "Keep high-capacity batteries in carry-on luggage when flying and check current travel guidance."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "power-bank-size-for-travel",
+    "title": "Power Bank Size for Travel",
+    "category": "Travel",
+    "description": "Use watt-hours and device needs to choose a power bank that fits travel and everyday charging.",
+    "source_ids": [
+      "faa_lithium",
+      "usb_pd",
+      "tsa_bring"
+    ],
+    "sections": [
+      {
+        "heading": "Start with the device list",
+        "body": "Travel charging depends on the phone, tablet, earbuds, camera, and fan you actually carry. Count devices before choosing capacity.",
+        "bullets": [
+          "List each device and whether it uses USB-C, Lightning, or another cable.",
+          "Estimate how many full charges matter between wall outlets.",
+          "Keep one short cable in the same pouch as the bank."
+        ]
+      },
+      {
+        "heading": "Use watt-hours for boundaries",
+        "body": "Watt-hours help compare banks across labels and support flight packing decisions. Very large banks need extra attention before travel.",
+        "bullets": [
+          "Look for a watt-hour marking or calculate from labeled capacity and voltage.",
+          "Check airline and FAA guidance before packing high-capacity batteries.",
+          "Carry batteries where required by current travel rules."
+        ]
+      },
+      {
+        "heading": "Choose shape by trip style",
+        "body": "A slim bank suits walking days, while a larger USB-C PD bank suits laptops and long layovers.",
+        "bullets": [
+          "Choose pocketable shape for city travel.",
+          "Choose USB-C PD output for compatible tablets and laptops.",
+          "Avoid banks that hide input and output specifications."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "usb-c-charger-buying-checklist",
+    "title": "USB-C Charger Buying Checklist",
+    "category": "Portable Power",
+    "description": "Match charger output, cable capability, plug shape, and device input before buying another brick.",
+    "source_ids": [
+      "usb_pd"
+    ],
+    "sections": [
+      {
+        "heading": "Match charger to device input",
+        "body": "USB-C does not mean every charger behaves the same. The device label and manufacturer documentation decide the useful output level.",
+        "bullets": [
+          "Check the device input requirement before buying.",
+          "Match the cable capability to the charger and device.",
+          "Use a compact multi-port charger only if the ports still meet the needed output when shared."
+        ]
+      },
+      {
+        "heading": "Travel shape and cord plan",
+        "body": "A folding plug, detachable cord, or extra outlet clearance can matter more than an extra port.",
+        "bullets": [
+          "Check whether the charger blocks neighboring outlets.",
+          "Pack the cable length that fits hotel, airport, or bedside layouts.",
+          "Use one labeled pouch for charger, adapter, and cables."
+        ]
+      },
+      {
+        "heading": "What to skip",
+        "body": "Skip vague listings that do not state output modes or make compatibility unclear.",
+        "bullets": [
+          "Look for clearly printed voltage and current output.",
+          "Prefer known connector standards over proprietary wording.",
+          "Do not rely on a plug adapter to change voltage for a charger not designed for it."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "portable-fan-for-power-outages",
+    "title": "Portable Fan for Power Outages",
+    "category": "Convenience",
+    "description": "Choose a fan by wattage, runtime, airflow location, and power source so it helps when the room gets warm.",
+    "source_ids": [
+      "cdc_heat",
+      "ready_power_outages"
+    ],
+    "sections": [
+      {
+        "heading": "Runtime is the core number",
+        "body": "A fan that feels useful for one hour may not solve a warm bedroom overnight. Convert watts and battery watt-hours before buying.",
+        "bullets": [
+          "Divide battery watt-hours by fan watts for a rough runtime.",
+          "Plan for lower speed settings when silence and duration matter.",
+          "Keep a separate phone-charging reserve instead of draining every bank on airflow."
+        ]
+      },
+      {
+        "heading": "Airflow placement",
+        "body": "Small fans help most when they can sit safely near the person, not across a room.",
+        "bullets": [
+          "Check clip, stand, or hanging options before buying.",
+          "Make sure cords do not cross walking paths in the dark.",
+          "Use airflow with hydration and heat-safety guidance."
+        ]
+      },
+      {
+        "heading": "Outage storage",
+        "body": "A fan belongs with its charging cable and a label showing typical runtime.",
+        "bullets": [
+          "Store the cable in the same pouch.",
+          "Top off the battery during regular supply checks.",
+          "Pick controls that are easy to use in low light."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "tent-fan-and-lantern-planning",
+    "title": "Tent Fan and Lantern Planning",
+    "category": "Camping",
+    "description": "Plan small comfort gear for a tent by runtime, hanging options, noise, and charging reality.",
+    "source_ids": [
+      "nps_camping",
+      "cdc_heat"
+    ],
+    "sections": [
+      {
+        "heading": "Comfort gear should earn its space",
+        "body": "Tent fans and lanterns compete with food, clothing, and shelter weight. Choose the item that solves a real sleep or visibility problem.",
+        "bullets": [
+          "Prioritize quiet airflow for sleeping areas.",
+          "Use warm, low light for inside the tent and brighter task light outside.",
+          "Check hanging points before assuming a lantern or fan can be mounted."
+        ]
+      },
+      {
+        "heading": "Power and charging",
+        "body": "Camping charging is constrained by trip days, shade, cold, and connector compatibility.",
+        "bullets": [
+          "Estimate nightly fan runtime before choosing battery size.",
+          "Keep a backup headlamp even if the lantern is rechargeable.",
+          "Match solar or battery connectors before the trip."
+        ]
+      },
+      {
+        "heading": "Packability",
+        "body": "A compact fan that cannot stand securely may be less useful than a slightly larger one with a stable base.",
+        "bullets": [
+          "Test the fan on the ground and from a hanging point.",
+          "Pack cables in a bright pouch.",
+          "Avoid gear with tiny loose parts that are easy to lose at camp."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "camping-power-station-sizing",
+    "title": "Camping Power Station Sizing",
+    "category": "Camping",
+    "description": "Estimate daily watt-hours for lights, phones, fans, and small devices before choosing a portable station.",
+    "source_ids": [
+      "nps_camping",
+      "ready_power_outages"
+    ],
+    "sections": [
+      {
+        "heading": "Build the load list",
+        "body": "A power station should be sized from the actual camp loads: phones, lights, fan, camera, pump, or small medical device.",
+        "bullets": [
+          "Write wattage and hours for each device.",
+          "Separate critical loads from comfort loads.",
+          "Add reserve for cold nights and cloudy days."
+        ]
+      },
+      {
+        "heading": "Capacity and output are different",
+        "body": "A station may have enough watt-hours but still lack the output port or wattage needed for a device.",
+        "bullets": [
+          "Check AC, USB-C, USB-A, and DC outputs against your devices.",
+          "Look for continuous output, not only peak wording.",
+          "Keep cable adapters minimal to reduce failure points."
+        ]
+      },
+      {
+        "heading": "Recharge plan",
+        "body": "A battery with no recharge path must cover the full trip. Solar helps only when sun exposure and connectors work.",
+        "bullets": [
+          "Estimate usable sun hours conservatively.",
+          "Test panel and battery together before leaving.",
+          "Keep lights on a smaller independent backup."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "solar-panel-match-for-camping",
+    "title": "Solar Panel Match for Camping",
+    "category": "Camping",
+    "description": "Use sun hours, connector compatibility, and battery capacity to decide whether portable solar is useful for your trip.",
+    "source_ids": [
+      "nps_camping"
+    ],
+    "sections": [
+      {
+        "heading": "Panel size starts with daily use",
+        "body": "A portable panel should replace a meaningful portion of daily watt-hours. Otherwise it becomes bulk without much benefit.",
+        "bullets": [
+          "Calculate daily watt-hours from the camping-power tool.",
+          "Divide by usable sun hours to set a starting wattage.",
+          "Add margin for angle, shade, heat, and clouds."
+        ]
+      },
+      {
+        "heading": "Connector compatibility",
+        "body": "Many solar frustrations come from mismatched plugs and charging limits rather than from the panel itself.",
+        "bullets": [
+          "Check the battery input port and voltage range.",
+          "Confirm whether an adapter cable is included.",
+          "Test the setup at home in sunlight."
+        ]
+      },
+      {
+        "heading": "When solar makes sense",
+        "body": "Solar is most helpful on multi-day trips with daylight basecamp time and open sky.",
+        "bullets": [
+          "Skip it for short trips where a charged battery covers the load.",
+          "Use it for phones and lights before comfort devices.",
+          "Store the panel where it will not crack or bend during travel."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "air-mattress-pump-selector-guide",
+    "title": "Air Mattress Pump Selector Guide",
+    "category": "Camping",
+    "description": "Choose between high-volume pumps, rechargeable pumps, and manual backup by pressure and nozzle needs.",
+    "source_ids": [
+      "nps_camping"
+    ],
+    "sections": [
+      {
+        "heading": "Pressure and volume are separate",
+        "body": "Air mattresses need volume more than high pressure. A tire inflator can be too slow, while a high-volume pump may be wrong for tires.",
+        "bullets": [
+          "Choose high airflow for mattresses and rafts.",
+          "Use a pressure-aware inflator for tires and balls.",
+          "Match nozzles to the valve before considering power source."
+        ]
+      },
+      {
+        "heading": "Power source fit",
+        "body": "Rechargeable pumps are convenient away from outlets, while wall-powered pumps suit guest rooms and planned setups.",
+        "bullets": [
+          "Use USB rechargeable for camping and car storage.",
+          "Use wall power for frequent indoor setup.",
+          "Keep a manual backup for important sleep setups."
+        ]
+      },
+      {
+        "heading": "Storage and noise",
+        "body": "A pump that is easy to find and quick to use is more valuable than one with unused modes.",
+        "bullets": [
+          "Store nozzles in a pouch attached to the pump.",
+          "Check whether deflate mode matters for packing.",
+          "Consider noise if inflating late at night."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "pool-float-and-inflatable-pump-guide",
+    "title": "Pool Float and Inflatable Pump Guide",
+    "category": "Convenience",
+    "description": "Avoid overbuying by matching nozzle style, deflate mode, and recharge method to seasonal inflatables.",
+    "source_ids": [
+      "ready_kit"
+    ],
+    "sections": [
+      {
+        "heading": "Seasonal inflatables need fast setup",
+        "body": "Pool floats, loungers, and toys usually need nozzle variety and deflate mode more than pressure.",
+        "bullets": [
+          "Look for wide and narrow nozzle tips.",
+          "Prioritize deflate mode for storage at the end of the day.",
+          "Keep charging status visible before pool trips."
+        ]
+      },
+      {
+        "heading": "Avoid overinflation",
+        "body": "Inflatables can be damaged by forcing air after they are firm enough for their intended use.",
+        "bullets": [
+          "Use short bursts near the end.",
+          "Let warmed material expand before adding more air.",
+          "Do not use tire-pressure targets for soft inflatables."
+        ]
+      },
+      {
+        "heading": "Storage kit",
+        "body": "A small seasonal pouch prevents lost nozzles and dead batteries.",
+        "bullets": [
+          "Store pump, nozzles, patch kit, and charging cable together.",
+          "Label the pouch by season.",
+          "Keep the pump dry and away from pool chemicals."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "vehicle-tire-inflator-checklist",
+    "title": "Vehicle Tire Inflator Checklist",
+    "category": "Auto",
+    "description": "A practical checklist for matching a tire inflator to your vehicle, outlet, pressure target, and storage spot.",
+    "source_ids": [
+      "nhtsa_tires",
+      "ready_car"
+    ],
+    "sections": [
+      {
+        "heading": "Start at the door placard",
+        "body": "The vehicle placard is the planning pressure reference. The number on the tire sidewall is not the routine fill target.",
+        "bullets": [
+          "Write the placard PSI in the glove box notes.",
+          "Check pressure when tires are cold when practical.",
+          "Use a separate gauge to confirm readings."
+        ]
+      },
+      {
+        "heading": "Match duty cycle to vehicle size",
+        "body": "A compact car top-off and a truck tire refill are different jobs. Heat management and hose reach matter.",
+        "bullets": [
+          "Check cord length from outlet to each tire.",
+          "Pause during long fills if the unit instructions require it.",
+          "Choose a storage case that keeps the hose from kinking."
+        ]
+      },
+      {
+        "heading": "Kit pairing",
+        "body": "An inflator works better as part of a small tire-care kit.",
+        "bullets": [
+          "Pair it with a gauge and valve caps.",
+          "Keep gloves and a light nearby.",
+          "Store it where luggage will not crush the hose."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "tire-pressure-gauge-basics",
+    "title": "Tire Pressure Gauge Basics",
+    "category": "Auto",
+    "description": "Understand why a simple gauge belongs beside any inflator and how it fits tire-care routines.",
+    "source_ids": [
+      "nhtsa_tires"
+    ],
+    "sections": [
+      {
+        "heading": "Why the gauge still matters",
+        "body": "Built-in inflator displays are useful, but a separate gauge gives an independent check and can live in the vehicle full time.",
+        "bullets": [
+          "Use the gauge before and after filling.",
+          "Compare readings occasionally to catch drift.",
+          "Choose a display you can read in daylight and low light."
+        ]
+      },
+      {
+        "heading": "Analog or digital",
+        "body": "Either style can work if it is easy to use and stored correctly.",
+        "bullets": [
+          "Analog gauges avoid battery maintenance.",
+          "Digital gauges can be easier to read quickly.",
+          "Protect the gauge from dirt and heavy impact."
+        ]
+      },
+      {
+        "heading": "Routine placement",
+        "body": "The gauge should live where tire checks happen, not in a drawer at home.",
+        "bullets": [
+          "Keep it with the inflator or in the door pocket.",
+          "Add valve caps to the same pouch.",
+          "Record the vehicle placard pressure on a label."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "car-emergency-kit-for-commuters",
+    "title": "Car Emergency Kit for Commuters",
+    "category": "Auto",
+    "description": "Build a compact kit for local commuting without turning the trunk into a storage locker.",
+    "source_ids": [
+      "ready_car",
+      "ready_water"
+    ],
+    "sections": [
+      {
+        "heading": "Design for short disruptions",
+        "body": "A commuter kit should handle a flat tire, dead phone, dark parking lot, minor injury, and traffic delay without filling the trunk.",
+        "bullets": [
+          "Use a small bin or seat-back pouch.",
+          "Prioritize visibility, light, water, first aid, and phone power.",
+          "Keep work shoes or weather layers in mind if you commute dressed for indoors."
+        ]
+      },
+      {
+        "heading": "Water and comfort",
+        "body": "A short commute can become a long wait when roads close. Water and warmth or cooling are compact safeguards.",
+        "bullets": [
+          "Add water that can be rotated easily.",
+          "Include a compact blanket or cooling cloth based on climate.",
+          "Keep snacks separate from fluids to reduce mess."
+        ]
+      },
+      {
+        "heading": "Finding items quickly",
+        "body": "The kit should be reachable from the driver area or trunk edge.",
+        "bullets": [
+          "Use clear pouches by category.",
+          "Place a light at the top.",
+          "Review the kit after seasonal changes."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "cold-weather-car-kit",
+    "title": "Cold Weather Car Kit",
+    "category": "Auto",
+    "description": "Prioritize warmth, visibility, traction, and communication for winter driving disruptions.",
+    "source_ids": [
+      "ready_car"
+    ],
+    "sections": [
+      {
+        "heading": "Warmth before convenience",
+        "body": "Cold-weather kits should help a person stay visible, warm, and able to communicate during a delay.",
+        "bullets": [
+          "Add gloves, hat, blanket, and extra socks.",
+          "Include a scraper and traction aid if conditions call for it.",
+          "Keep phone power and charging cable in the vehicle."
+        ]
+      },
+      {
+        "heading": "Visibility in snow and dark",
+        "body": "Winter delays often combine poor light with poor road visibility.",
+        "bullets": [
+          "Use reflective markers or a vest.",
+          "Keep a headlamp accessible.",
+          "Store batteries where cold exposure is considered."
+        ]
+      },
+      {
+        "heading": "Water and food choices",
+        "body": "Choose items that tolerate vehicle temperature swings and are easy to rotate.",
+        "bullets": [
+          "Use water containers that can handle freezing expansion space.",
+          "Choose snacks that do not melt or crumble easily.",
+          "Check the kit after severe weather passes."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "hot-weather-car-kit",
+    "title": "Hot Weather Car Kit",
+    "category": "Auto",
+    "description": "Plan water, shade, cooling, and phone power for summer roadside delays.",
+    "source_ids": [
+      "ready_car",
+      "ready_water",
+      "cdc_heat"
+    ],
+    "sections": [
+      {
+        "heading": "Heat changes priorities",
+        "body": "Hot-weather kits should emphasize water, shade, cooling, and communication while avoiding supplies that degrade in a hot cabin.",
+        "bullets": [
+          "Store water where it can be rotated often.",
+          "Add a sunshade, cooling cloth, and hat.",
+          "Keep phone power out of direct sun when possible."
+        ]
+      },
+      {
+        "heading": "Roadside delay planning",
+        "body": "A summer breakdown can become uncomfortable quickly, especially with children, pets, or medical needs.",
+        "bullets": [
+          "Plan extra water for passengers and pets.",
+          "Keep a small towel or cloth for shade and grip.",
+          "Do not leave people or pets in a hot parked vehicle."
+        ]
+      },
+      {
+        "heading": "Product checks",
+        "body": "Heat can affect adhesives, batteries, and soft materials.",
+        "bullets": [
+          "Inspect stored items after heat waves.",
+          "Use a case that keeps tools organized.",
+          "Replace warped or leaking supplies immediately."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "carry-on-luggage-measurement-guide",
+    "title": "Carry-On Luggage Measurement Guide",
+    "category": "Travel",
+    "description": "Measure the real exterior of a packed bag and leave room for airline-specific rules.",
+    "source_ids": [
+      "tsa_bring"
+    ],
+    "sections": [
+      {
+        "heading": "Measure the real exterior",
+        "body": "Carry-on planning starts with the packed bag, including wheels, handles, and outside pockets.",
+        "bullets": [
+          "Measure length, width, and height after packing.",
+          "Use the luggage-size tool to calculate linear inches.",
+          "Leave margin because airline sizers and rules differ."
+        ]
+      },
+      {
+        "heading": "Weight is a separate issue",
+        "body": "A bag can fit the sizer and still be hard to lift or restricted by an airline weight rule.",
+        "bullets": [
+          "Use a luggage scale before leaving home.",
+          "Move dense items into a personal item only if rules allow it.",
+          "Keep medicines and essentials accessible."
+        ]
+      },
+      {
+        "heading": "Bag features that help",
+        "body": "The useful features are the ones that make measurement and inspection easier.",
+        "bullets": [
+          "Look for published exterior dimensions.",
+          "Choose handles that do not protrude awkwardly.",
+          "Use packing cubes to keep security checks tidy."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "packing-cubes-vs-compression-bags",
+    "title": "Packing Cubes vs Compression Bags",
+    "category": "Travel",
+    "description": "Pick organization tools by clothing type, inspection access, and whether compression creates a weight problem.",
+    "source_ids": [
+      "tsa_bring"
+    ],
+    "sections": [
+      {
+        "heading": "Organization and compression differ",
+        "body": "Packing cubes sort items. Compression bags reduce volume but can create dense, awkward bundles.",
+        "bullets": [
+          "Use cubes for shirts, underwear, socks, and categories.",
+          "Use compression for bulky soft items only when weight is controlled.",
+          "Keep liquids and electronics separate for inspection."
+        ]
+      },
+      {
+        "heading": "Access during travel",
+        "body": "The right organizer depends on whether you unpack once or live out of the bag.",
+        "bullets": [
+          "Choose cubes for multi-stop trips.",
+          "Use transparent or mesh tops to identify contents.",
+          "Avoid over-compressing items needed on travel day."
+        ]
+      },
+      {
+        "heading": "Fit check",
+        "body": "Organizers should match the bag interior instead of creating unused corners.",
+        "bullets": [
+          "Measure the suitcase interior.",
+          "Use fewer larger cubes for checked bags and smaller cubes for carry-ons.",
+          "Test the packed bag with the luggage-size checker."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "travel-adapter-vs-voltage-converter",
+    "title": "Travel Adapter vs Voltage Converter",
+    "category": "Travel",
+    "description": "Separate plug-shape problems from voltage problems before plugging in a device overseas.",
+    "source_ids": [
+      "iec_world_plugs",
+      "tsa_bring"
+    ],
+    "sections": [
+      {
+        "heading": "Plug shape is not voltage",
+        "body": "An adapter changes the physical plug interface. A converter addresses voltage for devices that are not compatible with the destination supply.",
+        "bullets": [
+          "Read the device label for input voltage.",
+          "Use IEC plug references to identify destination plug type.",
+          "Do not assume a universal adapter changes voltage."
+        ]
+      },
+      {
+        "heading": "Dual-voltage devices",
+        "body": "Many modern chargers are dual voltage, but heat tools and appliances often need closer checking.",
+        "bullets": [
+          "Look for 100-240V wording on the device or charger.",
+          "Check grounded plug needs separately.",
+          "Pack a USB charger that matches device charging requirements."
+        ]
+      },
+      {
+        "heading": "Safer travel kit",
+        "body": "A small labeled kit prevents wrong-cable surprises at the hotel.",
+        "bullets": [
+          "Pack adapter, charger, and cable together.",
+          "Use a grounded adapter when the device needs ground.",
+          "Leave questionable appliances at home rather than guessing."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "international-usb-charging-kit",
+    "title": "International USB Charging Kit",
+    "category": "Travel",
+    "description": "Build a simple USB charging kit that covers plugs, cables, power banks, and device labels.",
+    "source_ids": [
+      "iec_world_plugs",
+      "usb_pd",
+      "faa_lithium"
+    ],
+    "sections": [
+      {
+        "heading": "Build around USB first",
+        "body": "Phones, earbuds, e-readers, and tablets can often share a compact USB charging kit when cables are planned.",
+        "bullets": [
+          "List every connector before packing.",
+          "Use one multi-port charger only if shared output still meets needs.",
+          "Include a short cable and a longer bedside cable."
+        ]
+      },
+      {
+        "heading": "Destination plug planning",
+        "body": "The wall interface depends on country plug type, while the device side depends on USB standards.",
+        "bullets": [
+          "Use a plug adapter for the destination.",
+          "Check whether your charger is dual voltage.",
+          "Keep spare cables away from liquids and toiletries."
+        ]
+      },
+      {
+        "heading": "Battery travel notes",
+        "body": "Power banks add flexibility but need travel-rule attention.",
+        "bullets": [
+          "Check watt-hour marking before flights.",
+          "Carry batteries according to current aviation guidance.",
+          "Keep the power bank accessible for screening if needed."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "small-apartment-emergency-storage",
+    "title": "Small Apartment Emergency Storage",
+    "category": "Emergency Prep",
+    "description": "Use compact containers, vertical space, and modular categories for preparedness in limited storage.",
+    "source_ids": [
+      "ready_kit",
+      "ready_water"
+    ],
+    "sections": [
+      {
+        "heading": "Use vertical and modular storage",
+        "body": "Small homes need emergency supplies that fit normal life. Narrow bins, under-bed boxes, and door shelves can work better than one large tote.",
+        "bullets": [
+          "Map three storage zones: water, food, and tools.",
+          "Use clear containers so supplies can be checked quickly.",
+          "Avoid blocking exits or electrical panels."
+        ]
+      },
+      {
+        "heading": "Break the kit into categories",
+        "body": "Distributed storage is easier when every container has a theme and label.",
+        "bullets": [
+          "Keep first aid and light near the main living area.",
+          "Store water where weight is supported.",
+          "Place documents in a grab-and-go pouch."
+        ]
+      },
+      {
+        "heading": "Refresh without clutter",
+        "body": "Small spaces punish forgotten supplies, so rotation needs to be simple.",
+        "bullets": [
+          "Use household foods that can be rotated into normal meals.",
+          "Check labels during rent, insurance, or seasonal paperwork.",
+          "Donate or use duplicate items before adding new ones."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "family-emergency-supply-refresh-routine",
+    "title": "Family Emergency Supply Refresh Routine",
+    "category": "Emergency Prep",
+    "description": "Make supplies easier to rotate by tying dates, labels, and locations to normal household habits.",
+    "source_ids": [
+      "ready_kit",
+      "ready_water"
+    ],
+    "sections": [
+      {
+        "heading": "Make refresh dates visible",
+        "body": "A family kit stays useful when someone can see what needs attention without opening every container.",
+        "bullets": [
+          "Put a month label on each bin.",
+          "Keep a one-page inventory in the top container.",
+          "Assign categories rather than asking one person to remember everything."
+        ]
+      },
+      {
+        "heading": "Tie checks to existing habits",
+        "body": "The easiest refresh routine attaches to something already happening at home.",
+        "bullets": [
+          "Check batteries when clocks change if that routine fits your household.",
+          "Review water and food before storm season or travel season.",
+          "Update contact cards after school, work, or medical changes."
+        ]
+      },
+      {
+        "heading": "Reduce friction",
+        "body": "Small replacements are easier than rebuilding a neglected kit.",
+        "bullets": [
+          "Keep a shopping note for only missing categories.",
+          "Use containers that are easy to open and close.",
+          "Store instruction manuals in a single folder."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "pet-friendly-emergency-kit",
+    "title": "Pet-Friendly Emergency Kit",
+    "category": "Emergency Prep",
+    "description": "Add pet food, water, leash, carrier, sanitation, and comfort items to the household planning math.",
+    "source_ids": [
+      "ready_kit",
+      "ready_water"
+    ],
+    "sections": [
+      {
+        "heading": "Add pets to the math",
+        "body": "Pet planning affects water, food, sanitation, transport, and comfort. It should not be an afterthought in the household kit.",
+        "bullets": [
+          "Add water and food by pet and day.",
+          "Keep a leash, carrier, or restraint where it can be reached quickly.",
+          "Store copies of vaccination and microchip information."
+        ]
+      },
+      {
+        "heading": "Sanitation and comfort",
+        "body": "Pet supplies can prevent stress and mess during an evacuation or outage.",
+        "bullets": [
+          "Pack waste bags, litter needs, and cleaning wipes.",
+          "Include a familiar small blanket or toy if space allows.",
+          "Keep medication instructions with the pet documents."
+        ]
+      },
+      {
+        "heading": "Buying checklist",
+        "body": "Choose pet kit containers that are easy to carry with human supplies.",
+        "bullets": [
+          "Use waterproof labels.",
+          "Separate food from cleaning products.",
+          "Refresh pet food before normal feeding routines change."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "food-safety-during-power-outages",
+    "title": "Food Safety During Power Outages",
+    "category": "Household",
+    "description": "Choose thermometers, coolers, and power priorities that support safer food decisions during an outage.",
+    "source_ids": [
+      "food_power",
+      "ready_power_outages"
+    ],
+    "sections": [
+      {
+        "heading": "Temperature decides the plan",
+        "body": "Food-safety decisions during an outage depend on time, temperature, and whether cold storage stayed closed.",
+        "bullets": [
+          "Use appliance thermometers in refrigerator and freezer spaces.",
+          "Keep a cooler plan for essential items.",
+          "Open cold storage only when needed."
+        ]
+      },
+      {
+        "heading": "Power priorities",
+        "body": "Not every appliance can or should be powered by a small battery. Decide what must stay cold before an outage.",
+        "bullets": [
+          "Prioritize medical refrigeration if applicable.",
+          "Use generators only with proper outdoor placement and safety guidance.",
+          "Keep phone alerts and radio updates separate from food decisions."
+        ]
+      },
+      {
+        "heading": "Supplies that help decisions",
+        "body": "Thermometers, coolers, ice packs, and labels support safer choices without guesswork.",
+        "bullets": [
+          "Freeze water containers ahead of storms when possible.",
+          "Label cooler contents by priority.",
+          "Keep food-safety source guidance with the emergency folder."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "smoke-alarm-and-battery-checks",
+    "title": "Smoke Alarm and Battery Checks",
+    "category": "Household",
+    "description": "Turn alarm checks, batteries, and reminders into a simple home-safety rhythm.",
+    "source_ids": [
+      "usfa_smoke_alarms",
+      "ready_kit"
+    ],
+    "sections": [
+      {
+        "heading": "Alarms need a routine",
+        "body": "Smoke alarms are easy to ignore until they chirp. A written routine keeps testing, battery checks, and replacement planning visible.",
+        "bullets": [
+          "List alarm locations by room.",
+          "Test according to current safety guidance.",
+          "Keep spare batteries only for alarms that use replaceable batteries."
+        ]
+      },
+      {
+        "heading": "Match batteries correctly",
+        "body": "Wrong or weak batteries create nuisance issues and reduce trust in the alarm system.",
+        "bullets": [
+          "Use the battery type specified by the alarm.",
+          "Label the install month where appropriate.",
+          "Replace alarms according to manufacturer and safety guidance."
+        ]
+      },
+      {
+        "heading": "Connect to the emergency kit",
+        "body": "Alarm checks are a natural moment to inspect flashlights and other household safety supplies.",
+        "bullets": [
+          "Check lights and radio at the same time.",
+          "Update the emergency contact card.",
+          "Clear clutter around exits while doing the walk-through."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "portable-generator-safety-boundaries",
+    "title": "Portable Generator Safety Boundaries",
+    "category": "Household",
+    "description": "Keep generator planning focused on outdoor placement, carbon monoxide risk, cords, and load discipline.",
+    "source_ids": [
+      "cpsc_generators",
+      "ready_power_outages"
+    ],
+    "sections": [
+      {
+        "heading": "Safety boundaries come first",
+        "body": "Generator planning starts with carbon monoxide risk, outdoor placement, extension cords, and load discipline before convenience.",
+        "bullets": [
+          "Keep generators outdoors and away from openings according to safety guidance.",
+          "Use carbon monoxide alarms in the home.",
+          "Never treat a garage as a safe operating space."
+        ]
+      },
+      {
+        "heading": "Load planning",
+        "body": "A generator should power selected essentials, not every device in the house.",
+        "bullets": [
+          "List critical loads before buying accessories.",
+          "Use cords rated for the intended load and environment.",
+          "Keep fuel storage away from living areas and ignition sources."
+        ]
+      },
+      {
+        "heading": "Outage workflow",
+        "body": "A written sequence reduces mistakes when the lights are already out.",
+        "bullets": [
+          "Post setup steps with the generator supplies.",
+          "Store flashlights so setup does not happen in darkness.",
+          "Review safety guidance before storm season."
+        ]
+      }
+    ]
+  }
+]

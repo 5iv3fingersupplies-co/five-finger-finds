@@ -1,0 +1,29 @@
+name: Source Integrity
+
+on:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "47 8 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out public site source
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run autonomous maintenance
+        run: python scripts/maintenance.py --out reports
+      - name: Build static site
+        run: python scripts/build.py --out site --automation-report reports/automation-report.json
+      - name: Validate generated site
+        run: python scripts/validate.py --dist site
+      - name: Run tests
+        run: python -m unittest discover -s tests

@@ -1,0 +1,107 @@
+[
+  {
+    "id": "ready_kit",
+    "title": "Ready.gov emergency kit guidance",
+    "publisher": "Ready.gov",
+    "url": "https://www.ready.gov/kit",
+    "notes": "Baseline household kit categories such as water, food, radio, flashlight, first aid, batteries, whistle, dust mask, sanitation, tools, maps, phone supplies, medicine, pet items, and documents."
+  },
+  {
+    "id": "ready_water",
+    "title": "Ready.gov water guidance",
+    "publisher": "Ready.gov",
+    "url": "https://www.ready.gov/water",
+    "notes": "Planning baseline of one gallon of water per person per day, with extra considerations for heat, pregnancy, illness, children, and pets."
+  },
+  {
+    "id": "ready_power_outages",
+    "title": "Ready.gov power outage guidance",
+    "publisher": "Ready.gov",
+    "url": "https://www.ready.gov/power-outages",
+    "notes": "Preparedness guidance for charging devices, food safety, flashlights, batteries, and safe generator use."
+  },
+  {
+    "id": "ready_car",
+    "title": "Ready.gov car safety guidance",
+    "publisher": "Ready.gov",
+    "url": "https://www.ready.gov/car",
+    "notes": "Vehicle emergency preparation guidance for road disruptions and severe weather."
+  },
+  {
+    "id": "nhtsa_tires",
+    "title": "NHTSA tire safety",
+    "publisher": "National Highway Traffic Safety Administration",
+    "url": "https://www.nhtsa.gov/equipment/tires",
+    "notes": "Tire-pressure basics, checking tires, tread, load, and maintenance considerations."
+  },
+  {
+    "id": "faa_lithium",
+    "title": "FAA PackSafe lithium battery guidance",
+    "publisher": "Federal Aviation Administration",
+    "url": "https://www.faa.gov/hazmat/packsafe/lithium-batteries",
+    "notes": "Lithium battery and power-bank carry guidance, including watt-hour considerations."
+  },
+  {
+    "id": "tsa_bring",
+    "title": "TSA What Can I Bring",
+    "publisher": "Transportation Security Administration",
+    "url": "https://www.tsa.gov/travel/security-screening/whatcanibring/all",
+    "notes": "Screening guidance for travel items and batteries; travelers should check current TSA and airline rules before departure."
+  },
+  {
+    "id": "iec_world_plugs",
+    "title": "IEC World Plugs",
+    "publisher": "International Electrotechnical Commission",
+    "url": "https://www.iec.ch/world-plugs",
+    "notes": "Plug, socket, and voltage reference by country for travel-adapter planning."
+  },
+  {
+    "id": "usb_pd",
+    "title": "USB-IF USB Power Delivery overview",
+    "publisher": "USB Implementers Forum",
+    "url": "https://www.usb.org/usb-charger-pd",
+    "notes": "USB Power Delivery concepts for chargers, power banks, and device charging."
+  },
+  {
+    "id": "nps_camping",
+    "title": "NPS camping basics",
+    "publisher": "National Park Service",
+    "url": "https://www.nps.gov/subjects/camping/how-to-camp.htm",
+    "notes": "Basic camping planning, shelter, water, food, safety, and leave-no-trace considerations."
+  },
+  {
+    "id": "weather_radio",
+    "title": "NOAA Weather Radio",
+    "publisher": "National Weather Service",
+    "url": "https://www.weather.gov/nwr/",
+    "notes": "Weather radio preparedness and alerting context."
+  },
+  {
+    "id": "food_power",
+    "title": "FoodSafety.gov food safety during power outage",
+    "publisher": "FoodSafety.gov",
+    "url": "https://www.foodsafety.gov/food-safety-charts/food-safety-during-power-outage",
+    "notes": "Food safety time and temperature guidance during outages."
+  },
+  {
+    "id": "usfa_smoke_alarms",
+    "title": "USFA smoke alarm guidance",
+    "publisher": "U.S. Fire Administration",
+    "url": "https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/",
+    "notes": "Smoke alarm placement, testing, and replacement guidance."
+  },
+  {
+    "id": "cpsc_generators",
+    "title": "CPSC portable generator safety",
+    "publisher": "U.S. Consumer Product Safety Commission",
+    "url": "https://www.cpsc.gov/Safety-Education/Safety-Education-Centers/Carbon-Monoxide/Generators",
+    "notes": "Portable generator carbon monoxide safety guidance."
+  },
+  {
+    "id": "cdc_heat",
+    "title": "CDC heat and health",
+    "publisher": "Centers for Disease Control and Prevention",
+    "url": "https://www.cdc.gov/heat-health/about/",
+    "notes": "Heat illness risk context that informs fan, hydration, and cooling planning."
+  }
+]

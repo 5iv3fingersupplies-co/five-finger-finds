@@ -1,0 +1,18 @@
+{
+  "kill_switch": false,
+  "max_incremental_cost_usd": 0,
+  "paid_apis_allowed": false,
+  "local_ai_optional_only": true,
+  "retry_limit": 1,
+  "discard_failed_after_retry": true,
+  "duplicate_prevention": "slug_and_content_fingerprint",
+  "routine_manual_approval_required": false,
+  "candidate_queue_file": "data/content_queue.json",
+  "public_safe_rules": [
+    "no_env_files",
+    "no_api_keys",
+    "no_private_jarvis_code",
+    "no_private_logs",
+    "no_customer_data"
+  ]
+}

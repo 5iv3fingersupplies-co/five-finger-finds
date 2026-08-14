@@ -1,0 +1,241 @@
+[
+  {
+    "id": "air_pump_high_volume",
+    "label": "High-volume low-pressure air pump",
+    "fit": "Air mattresses, floats, and storage bags where moving air quickly matters more than pressure.",
+    "query": "high volume rechargeable air pump multiple nozzles",
+    "source_ids": [
+      "nps_camping"
+    ]
+  },
+  {
+    "id": "tire_inflator_12v",
+    "label": "12V tire inflator with gauge",
+    "fit": "Vehicle tires where the target PSI comes from the door placard and a duty cycle matters.",
+    "query": "12V tire inflator with pressure gauge auto shutoff",
+    "source_ids": [
+      "nhtsa_tires"
+    ]
+  },
+  {
+    "id": "needle_inflator",
+    "label": "Needle and small-nozzle inflator",
+    "fit": "Sports balls and small inflatable items that need low volume and the right tip.",
+    "query": "portable inflator needle nozzle kit",
+    "source_ids": [
+      "ready_kit"
+    ]
+  },
+  {
+    "id": "compact_power_bank",
+    "label": "Compact USB power bank",
+    "fit": "Phones, small fans, lamps, and USB accessories where pocketable backup power is enough.",
+    "query": "USB C compact power bank watt hour listed",
+    "source_ids": [
+      "faa_lithium",
+      "usb_pd"
+    ]
+  },
+  {
+    "id": "laptop_power_bank",
+    "label": "USB-C PD laptop power bank",
+    "fit": "Laptops and tablets that list USB-C Power Delivery input requirements.",
+    "query": "USB C PD laptop power bank watt hour listed",
+    "source_ids": [
+      "faa_lithium",
+      "usb_pd"
+    ]
+  },
+  {
+    "id": "usb_c_charger",
+    "label": "USB-C PD wall charger",
+    "fit": "Travel and home charging when the device label supports USB-C Power Delivery.",
+    "query": "USB C PD wall charger travel folding plug",
+    "source_ids": [
+      "usb_pd"
+    ]
+  },
+  {
+    "id": "camp_battery",
+    "label": "Portable power station",
+    "fit": "Camping lights, small appliances, and outage backup where watt-hours matter.",
+    "query": "portable power station watt hour display",
+    "source_ids": [
+      "ready_power_outages",
+      "nps_camping"
+    ]
+  },
+  {
+    "id": "folding_solar_panel",
+    "label": "Folding solar panel",
+    "fit": "Daytime recharging when sun hours and connector compatibility are known.",
+    "query": "folding solar panel portable power station compatible",
+    "source_ids": [
+      "nps_camping"
+    ]
+  },
+  {
+    "id": "lantern_usb",
+    "label": "USB rechargeable lantern",
+    "fit": "Tent, outage, and car-kit lighting with a visible runtime specification.",
+    "query": "USB rechargeable lantern runtime specification",
+    "source_ids": [
+      "ready_kit"
+    ]
+  },
+  {
+    "id": "carry_on_luggage",
+    "label": "Measurable carry-on bag",
+    "fit": "Travelers who can verify exterior dimensions before packing.",
+    "query": "carry on luggage exterior dimensions listed",
+    "source_ids": [
+      "tsa_bring"
+    ]
+  },
+  {
+    "id": "luggage_scale",
+    "label": "Portable luggage scale",
+    "fit": "People who need to measure packed weight before leaving home.",
+    "query": "portable luggage scale digital",
+    "source_ids": [
+      "tsa_bring"
+    ]
+  },
+  {
+    "id": "packing_cubes",
+    "label": "Packing cube set",
+    "fit": "Organizing clothing and separating small categories without changing airline rules.",
+    "query": "packing cubes travel set mesh",
+    "source_ids": [
+      "tsa_bring"
+    ]
+  },
+  {
+    "id": "roadside_kit",
+    "label": "Roadside emergency kit",
+    "fit": "Vehicles that need visibility, basic tools, gloves, and emergency signaling.",
+    "query": "roadside emergency kit reflective triangle gloves",
+    "source_ids": [
+      "ready_car"
+    ]
+  },
+  {
+    "id": "jump_starter",
+    "label": "Portable jump starter",
+    "fit": "Drivers who want battery-start backup matched to vehicle type and stored safely.",
+    "query": "portable jump starter vehicle safety case",
+    "source_ids": [
+      "ready_car"
+    ]
+  },
+  {
+    "id": "emergency_blanket",
+    "label": "Emergency blanket set",
+    "fit": "Car, hiking, and household kits where compact warmth backup is helpful.",
+    "query": "emergency blanket set compact",
+    "source_ids": [
+      "ready_kit",
+      "ready_car"
+    ]
+  },
+  {
+    "id": "tire_gauge",
+    "label": "Tire pressure gauge",
+    "fit": "Checking PSI against the vehicle placard before inflating.",
+    "query": "tire pressure gauge easy read",
+    "source_ids": [
+      "nhtsa_tires"
+    ]
+  },
+  {
+    "id": "usb_fan",
+    "label": "USB desk fan",
+    "fit": "Low-watt personal airflow from a USB power bank.",
+    "query": "USB fan wattage listed quiet desk",
+    "source_ids": [
+      "cdc_heat"
+    ]
+  },
+  {
+    "id": "battery_fan",
+    "label": "Battery fan with stated watt-hours",
+    "fit": "Bedside outage or tent use where runtime matters.",
+    "query": "battery fan watt hour runtime listed",
+    "source_ids": [
+      "ready_power_outages",
+      "cdc_heat"
+    ]
+  },
+  {
+    "id": "universal_adapter",
+    "label": "Universal travel adapter",
+    "fit": "Multiple destinations when the device is dual voltage and the adapter supports the plug pattern.",
+    "query": "universal travel adapter grounded USB C",
+    "source_ids": [
+      "iec_world_plugs"
+    ]
+  },
+  {
+    "id": "grounded_adapter",
+    "label": "Grounded plug adapter",
+    "fit": "Three-prong devices where the destination plug type differs and voltage is compatible.",
+    "query": "grounded travel plug adapter type G type C type I",
+    "source_ids": [
+      "iec_world_plugs"
+    ]
+  },
+  {
+    "id": "water_container",
+    "label": "Food-grade water container",
+    "fit": "Households planning stored water by people and days.",
+    "query": "food grade water storage container spigot",
+    "source_ids": [
+      "ready_water"
+    ]
+  },
+  {
+    "id": "weather_radio_product",
+    "label": "Weather alert radio",
+    "fit": "Households that need battery or hand-crank access to emergency alerts.",
+    "query": "NOAA weather alert radio battery hand crank",
+    "source_ids": [
+      "weather_radio"
+    ]
+  },
+  {
+    "id": "first_aid_kit",
+    "label": "Household first-aid kit",
+    "fit": "Home, car, and travel kits needing basic wound-care supplies.",
+    "query": "household first aid kit organized case",
+    "source_ids": [
+      "ready_kit"
+    ]
+  },
+  {
+    "id": "notebook_labels",
+    "label": "Decision notebook and labels",
+    "fit": "Keeping measurements, model numbers, and kit refresh dates visible.",
+    "query": "waterproof labels notebook emergency kit",
+    "source_ids": [
+      "ready_kit"
+    ]
+  },
+  {
+    "id": "storage_bins",
+    "label": "Clear storage bins",
+    "fit": "Household kits that need category separation and fast visual checks.",
+    "query": "clear storage bins latching lid home organization",
+    "source_ids": [
+      "ready_kit"
+    ]
+  },
+  {
+    "id": "measuring_tape",
+    "label": "Measuring tape",
+    "fit": "Luggage, storage, appliance, and product-fit checks before buying.",
+    "query": "compact measuring tape inch metric",
+    "source_ids": [
+      "ready_kit"
+    ]
+  }
+]

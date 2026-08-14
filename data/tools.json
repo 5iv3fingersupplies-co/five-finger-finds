@@ -1,0 +1,546 @@
+[
+  {
+    "slug": "portable-air-pump-selector",
+    "title": "Portable Air-Pump Selector",
+    "category": "Convenience",
+    "icon": "air-pump.svg",
+    "description": "Match an inflator style to the item, volume, pressure target, power source, and nozzle needs.",
+    "tool_type": "air_pump",
+    "source_ids": [
+      "nps_camping",
+      "ready_kit"
+    ],
+    "recommendation_ids": [
+      "air_pump_high_volume",
+      "tire_inflator_12v",
+      "needle_inflator"
+    ],
+    "fields": [
+      {
+        "id": "item",
+        "label": "Item to inflate",
+        "type": "select",
+        "options": [
+          "air mattress",
+          "pool float",
+          "sports ball",
+          "vehicle tire",
+          "vacuum storage bag"
+        ]
+      },
+      {
+        "id": "volume",
+        "label": "Approximate volume in liters",
+        "type": "number",
+        "min": 1,
+        "max": 2000,
+        "value": 80
+      },
+      {
+        "id": "pressure",
+        "label": "Pressure target in PSI",
+        "type": "number",
+        "min": 0,
+        "max": 150,
+        "value": 2
+      },
+      {
+        "id": "power",
+        "label": "Power source",
+        "type": "select",
+        "options": [
+          "USB rechargeable",
+          "12V vehicle outlet",
+          "wall outlet"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "power-bank-capacity-calculator",
+    "title": "Power-Bank Capacity Calculator",
+    "category": "Portable Power",
+    "icon": "power-bank.svg",
+    "description": "Estimate battery capacity from device size, charge count, conversion loss, and travel watt-hour caution points.",
+    "tool_type": "power_bank",
+    "source_ids": [
+      "faa_lithium",
+      "usb_pd"
+    ],
+    "recommendation_ids": [
+      "compact_power_bank",
+      "laptop_power_bank",
+      "usb_c_charger"
+    ],
+    "fields": [
+      {
+        "id": "deviceMah",
+        "label": "Device battery capacity in mAh",
+        "type": "number",
+        "min": 500,
+        "max": 30000,
+        "value": 5000
+      },
+      {
+        "id": "charges",
+        "label": "Full charges wanted",
+        "type": "number",
+        "min": 0.25,
+        "max": 10,
+        "step": 0.25,
+        "value": 2
+      },
+      {
+        "id": "efficiency",
+        "label": "Estimated conversion efficiency percent",
+        "type": "number",
+        "min": 55,
+        "max": 95,
+        "value": 75
+      },
+      {
+        "id": "deviceVoltage",
+        "label": "Device battery voltage",
+        "type": "number",
+        "min": 3,
+        "max": 24,
+        "step": 0.1,
+        "value": 3.7
+      }
+    ]
+  },
+  {
+    "slug": "camping-power-calculator",
+    "title": "Camping Power Calculator",
+    "category": "Camping",
+    "icon": "camp-power.svg",
+    "description": "Turn device wattage and trip length into a battery and solar-panel planning number.",
+    "tool_type": "camping_power",
+    "source_ids": [
+      "nps_camping",
+      "ready_power_outages",
+      "faa_lithium"
+    ],
+    "recommendation_ids": [
+      "camp_battery",
+      "folding_solar_panel",
+      "lantern_usb"
+    ],
+    "fields": [
+      {
+        "id": "watts",
+        "label": "Combined device watts while running",
+        "type": "number",
+        "min": 1,
+        "max": 2000,
+        "value": 45
+      },
+      {
+        "id": "hours",
+        "label": "Hours used per day",
+        "type": "number",
+        "min": 0.25,
+        "max": 24,
+        "step": 0.25,
+        "value": 4
+      },
+      {
+        "id": "days",
+        "label": "Trip days",
+        "type": "number",
+        "min": 1,
+        "max": 30,
+        "value": 3
+      },
+      {
+        "id": "sunHours",
+        "label": "Usable sun hours per day",
+        "type": "number",
+        "min": 0,
+        "max": 10,
+        "step": 0.5,
+        "value": 4
+      }
+    ]
+  },
+  {
+    "slug": "luggage-size-checker",
+    "title": "Luggage-Size Checker",
+    "category": "Travel",
+    "icon": "luggage.svg",
+    "description": "Compare bag dimensions, linear inches, and weight against common carry-on and checked-bag planning thresholds.",
+    "tool_type": "luggage",
+    "source_ids": [
+      "tsa_bring"
+    ],
+    "recommendation_ids": [
+      "carry_on_luggage",
+      "luggage_scale",
+      "packing_cubes"
+    ],
+    "fields": [
+      {
+        "id": "length",
+        "label": "Length in inches",
+        "type": "number",
+        "min": 1,
+        "max": 80,
+        "value": 22
+      },
+      {
+        "id": "width",
+        "label": "Width in inches",
+        "type": "number",
+        "min": 1,
+        "max": 80,
+        "value": 14
+      },
+      {
+        "id": "height",
+        "label": "Height in inches",
+        "type": "number",
+        "min": 1,
+        "max": 80,
+        "value": 9
+      },
+      {
+        "id": "weight",
+        "label": "Packed weight in pounds",
+        "type": "number",
+        "min": 0,
+        "max": 150,
+        "value": 28
+      }
+    ]
+  },
+  {
+    "slug": "car-emergency-kit-builder",
+    "title": "Car Emergency-Kit Builder",
+    "category": "Auto",
+    "icon": "car-kit.svg",
+    "description": "Build a vehicle kit list from climate, trip distance, passenger count, and night-driving risk.",
+    "tool_type": "car_kit",
+    "source_ids": [
+      "ready_car",
+      "nhtsa_tires",
+      "ready_water"
+    ],
+    "recommendation_ids": [
+      "roadside_kit",
+      "jump_starter",
+      "emergency_blanket"
+    ],
+    "fields": [
+      {
+        "id": "climate",
+        "label": "Driving climate",
+        "type": "select",
+        "options": [
+          "mild",
+          "hot",
+          "cold",
+          "mixed"
+        ]
+      },
+      {
+        "id": "passengers",
+        "label": "People usually in vehicle",
+        "type": "number",
+        "min": 1,
+        "max": 12,
+        "value": 2
+      },
+      {
+        "id": "distance",
+        "label": "Typical farthest trip miles",
+        "type": "number",
+        "min": 1,
+        "max": 1000,
+        "value": 80
+      },
+      {
+        "id": "night",
+        "label": "Often drive at night",
+        "type": "select",
+        "options": [
+          "yes",
+          "no"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "tire-inflator-requirements-helper",
+    "title": "Tire and Inflator Requirements Helper",
+    "category": "Auto",
+    "icon": "tire.svg",
+    "description": "Estimate inflator demands from target pressure, current pressure, tire size class, and outlet type.",
+    "tool_type": "tire_inflator",
+    "source_ids": [
+      "nhtsa_tires",
+      "ready_car"
+    ],
+    "recommendation_ids": [
+      "tire_inflator_12v",
+      "tire_gauge",
+      "roadside_kit"
+    ],
+    "fields": [
+      {
+        "id": "targetPsi",
+        "label": "Target PSI from door placard",
+        "type": "number",
+        "min": 10,
+        "max": 90,
+        "value": 35
+      },
+      {
+        "id": "currentPsi",
+        "label": "Current PSI",
+        "type": "number",
+        "min": 0,
+        "max": 90,
+        "value": 27
+      },
+      {
+        "id": "sizeClass",
+        "label": "Tire class",
+        "type": "select",
+        "options": [
+          "compact car",
+          "sedan/crossover",
+          "truck/SUV",
+          "bike"
+        ]
+      },
+      {
+        "id": "outlet",
+        "label": "Power outlet",
+        "type": "select",
+        "options": [
+          "12V vehicle outlet",
+          "battery-powered",
+          "wall outlet"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "portable-fan-sizing-tool",
+    "title": "Portable-Fan Sizing Tool",
+    "category": "Convenience",
+    "icon": "fan.svg",
+    "description": "Size a fan by runtime, battery watt-hours, cooling context, and noise sensitivity.",
+    "tool_type": "fan_sizing",
+    "source_ids": [
+      "cdc_heat",
+      "ready_power_outages"
+    ],
+    "recommendation_ids": [
+      "usb_fan",
+      "battery_fan",
+      "compact_power_bank"
+    ],
+    "fields": [
+      {
+        "id": "fanWatts",
+        "label": "Fan watts",
+        "type": "number",
+        "min": 1,
+        "max": 200,
+        "value": 8
+      },
+      {
+        "id": "batteryWh",
+        "label": "Battery watt-hours",
+        "type": "number",
+        "min": 1,
+        "max": 1000,
+        "value": 37
+      },
+      {
+        "id": "runtime",
+        "label": "Runtime wanted in hours",
+        "type": "number",
+        "min": 1,
+        "max": 72,
+        "value": 8
+      },
+      {
+        "id": "setting",
+        "label": "Use case",
+        "type": "select",
+        "options": [
+          "desk",
+          "tent",
+          "bedside outage",
+          "stroller/wagon"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "travel-adapter-finder",
+    "title": "Travel-Adapter Finder",
+    "category": "Travel",
+    "icon": "adapter.svg",
+    "description": "Choose adapter and converter questions from destination plug type, voltage, and device label.",
+    "tool_type": "travel_adapter",
+    "source_ids": [
+      "iec_world_plugs",
+      "tsa_bring"
+    ],
+    "recommendation_ids": [
+      "universal_adapter",
+      "grounded_adapter",
+      "usb_c_charger"
+    ],
+    "fields": [
+      {
+        "id": "destination",
+        "label": "Destination",
+        "type": "select",
+        "options": [
+          "United Kingdom",
+          "European Union",
+          "Japan",
+          "Australia/New Zealand",
+          "Mexico",
+          "United States/Canada"
+        ]
+      },
+      {
+        "id": "deviceVoltage",
+        "label": "Device label",
+        "type": "select",
+        "options": [
+          "100-240V dual voltage",
+          "120V only",
+          "230V only",
+          "not sure"
+        ]
+      },
+      {
+        "id": "grounded",
+        "label": "Needs ground pin",
+        "type": "select",
+        "options": [
+          "yes",
+          "no"
+        ]
+      },
+      {
+        "id": "usbOnly",
+        "label": "USB charging only",
+        "type": "select",
+        "options": [
+          "yes",
+          "no"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "household-emergency-supply-calculator",
+    "title": "Household Emergency-Supply Calculator",
+    "category": "Emergency Prep",
+    "icon": "house-kit.svg",
+    "description": "Calculate water, light, power, sanitation, pet, and medication planning prompts for a household kit.",
+    "tool_type": "household_supply",
+    "source_ids": [
+      "ready_kit",
+      "ready_water",
+      "weather_radio"
+    ],
+    "recommendation_ids": [
+      "water_container",
+      "weather_radio_product",
+      "first_aid_kit"
+    ],
+    "fields": [
+      {
+        "id": "people",
+        "label": "People",
+        "type": "number",
+        "min": 1,
+        "max": 20,
+        "value": 4
+      },
+      {
+        "id": "days",
+        "label": "Days planned",
+        "type": "number",
+        "min": 1,
+        "max": 30,
+        "value": 3
+      },
+      {
+        "id": "pets",
+        "label": "Pets",
+        "type": "number",
+        "min": 0,
+        "max": 20,
+        "value": 1
+      },
+      {
+        "id": "medical",
+        "label": "Medication or powered medical device",
+        "type": "select",
+        "options": [
+          "yes",
+          "no"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "product-comparison-selection-tool",
+    "title": "Product Comparison and Selection Tool",
+    "category": "Decision Tool",
+    "icon": "compare.svg",
+    "description": "Score up to three options against weighted criteria so the purchase follows the job, not impulse.",
+    "tool_type": "comparison",
+    "source_ids": [
+      "ready_kit"
+    ],
+    "recommendation_ids": [
+      "notebook_labels",
+      "storage_bins",
+      "measuring_tape"
+    ],
+    "fields": [
+      {
+        "id": "wFit",
+        "label": "Fit weight",
+        "type": "number",
+        "min": 1,
+        "max": 10,
+        "value": 5
+      },
+      {
+        "id": "wPortability",
+        "label": "Portability weight",
+        "type": "number",
+        "min": 1,
+        "max": 10,
+        "value": 3
+      },
+      {
+        "id": "wPower",
+        "label": "Power or capacity weight",
+        "type": "number",
+        "min": 1,
+        "max": 10,
+        "value": 4
+      },
+      {
+        "id": "wDurability",
+        "label": "Durability weight",
+        "type": "number",
+        "min": 1,
+        "max": 10,
+        "value": 4
+      }
+    ]
+  }
+]
