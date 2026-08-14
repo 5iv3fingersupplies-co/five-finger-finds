@@ -30,13 +30,15 @@ class SiteBuildTest(unittest.TestCase):
         self.assertTrue((ROOT / "site/tools/portable-air-pump-selector/index.html").exists())
         self.assertTrue((ROOT / "site/guides/household-emergency-kit-without-clutter/index.html").exists())
 
-    def test_monetization_is_placeholder_until_tag_supplied(self):
+    def test_monetization_uses_supplied_public_tag(self):
         affiliate = json.loads((ROOT / "data/affiliate.json").read_text(encoding="utf-8"))
-        self.assertFalse(affiliate["monetization_enabled"])
-        self.assertEqual(affiliate["amazon_associates_tag"], "")
+        self.assertTrue(affiliate["monetization_enabled"])
+        self.assertEqual(affiliate["amazon_associates_tag"], "fivefingersup-20")
         html = (ROOT / "site/tools/power-bank-capacity-calculator/index.html").read_text(encoding="utf-8")
-        self.assertIn("Affiliate link inactive", html)
-        self.assertNotIn("amazon.com/s?", html)
+        self.assertNotIn("Affiliate link inactive", html)
+        self.assertIn("https://www.amazon.com/s?", html)
+        self.assertIn("tag=fivefingersup-20", html)
+        self.assertIn('rel="sponsored nofollow noopener"', html)
 
 
 if __name__ == "__main__":

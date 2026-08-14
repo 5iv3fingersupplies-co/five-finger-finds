@@ -1,9 +1,9 @@
 {
-  "monetization_enabled": false,
-  "amazon_associates_tag": "",
-  "amazon_link_mode": "disabled_until_existing_tag_or_approved_link_set_is_supplied",
+  "monetization_enabled": true,
+  "amazon_associates_tag": "fivefingersup-20",
+  "amazon_link_mode": "amazon_search_links_from_structured_recommendation_queries",
   "required_disclosure": "As an Amazon Associate I earn from qualifying purchases.",
-  "plain_language_disclosure": "Five Finger Finds may earn from qualifying purchases if monetized product links are enabled. Product guidance is based on stated requirements and cited source records, not paid placement.",
+  "plain_language_disclosure": "Five Finger Finds may earn from qualifying purchases made through product links. Product guidance is based on stated requirements and cited source records, not paid placement.",
   "do_not_guess_affiliate_tags": true,
   "forbidden_program_content": [
     "amazon_customer_reviews",

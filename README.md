@@ -12,9 +12,9 @@ It is designed for $0 incremental operation:
 
 ## Monetization status
 
-Affiliate monetization is disabled until an existing Amazon Associates tag or approved link set is supplied in `data/affiliate.json`.
+Affiliate monetization is enabled with the public Amazon Associates tracking tag configured in `data/affiliate.json`.
 
-The generator will not guess an affiliate tag. While disabled, product recommendation cards show what to look for but do not create live outbound Amazon links.
+The generator will not guess an affiliate tag. Product recommendation cards use structured, source-backed search phrases and do not rehost Amazon Program Content, reviews, star ratings, prices, availability, or images.
 
 ## Local build
 

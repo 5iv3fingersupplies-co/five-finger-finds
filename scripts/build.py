@@ -323,6 +323,14 @@ def build_guide(out, site, affiliate, guide, sources, recommendations, tools):
 
 
 def build_static_pages(out, site, affiliate):
+    monetized_note = (
+        "Product-fit cards may link to Amazon search results with the public Associates tracking tag. "
+        "This site does not display Amazon customer reviews, star ratings, product images, live cost, or availability."
+        if affiliate.get("monetization_enabled")
+        else
+        "When monetization is disabled, product-fit cards are informational and do not send visitors to live affiliate destinations. "
+        "This site does not display Amazon customer reviews, star ratings, product images, live cost, or availability."
+    )
     static_pages = {
         "about": (
             "About",
@@ -332,7 +340,7 @@ def build_static_pages(out, site, affiliate):
         "affiliate-disclosure": (
             "Affiliate Disclosure",
             "Affiliate disclosure for Five Finger Finds.",
-            f"<p><strong>{esc(affiliate['required_disclosure'])}</strong></p><p>{esc(affiliate['plain_language_disclosure'])}</p><p>When monetization is disabled, product-fit cards are informational and do not send visitors to live affiliate destinations. This site does not display Amazon customer reviews, star ratings, product images, live cost, or availability.</p>",
+            f"<p><strong>{esc(affiliate['required_disclosure'])}</strong></p><p>{esc(affiliate['plain_language_disclosure'])}</p><p>{esc(monetized_note)}</p>",
         ),
         "privacy": (
             "Privacy",
