@@ -1,6 +1,6 @@
-# Five Finger Finds
+# Everyday Gear Buyer Tools
 
-Five Finger Finds is a static, public-safe buyer-decision-tool site for Five Finger Supplies.
+Everyday Gear Buyer Tools is a static, public-safe buyer-decision-tool site for Five Finger Supplies.
 
 It is designed for $0 incremental operation:
 

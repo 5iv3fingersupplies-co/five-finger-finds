@@ -351,12 +351,12 @@ def build_static_pages(out, site, affiliate):
     static_pages = {
         "about": (
             "About",
-            "Five Finger Finds explains practical product decisions with static calculators and source-backed guides.",
-            f"<p>Five Finger Finds is a Five Finger Supplies project for practical household, travel, auto, camping, emergency-prep, portable-power, and convenience decisions. The site is static and does not require customer accounts, checkout, fulfillment, or product support.</p><p>The calculators use deterministic browser-side JavaScript. The guides are generated from structured source records and templates.</p>{affiliate_note(affiliate)}",
+            f"{site['name']} explains practical product decisions with static calculators and source-backed guides.",
+            f"<p>{esc(site['name'])} is a Five Finger Supplies project for practical household, travel, auto, camping, emergency-prep, portable-power, and convenience decisions. The site is static and does not require customer accounts, checkout, fulfillment, or product support.</p><p>The calculators use deterministic browser-side JavaScript. The guides are generated from structured source records and templates.</p>{affiliate_note(affiliate)}",
         ),
         "affiliate-disclosure": (
             "Affiliate Disclosure",
-            "Affiliate disclosure for Five Finger Finds.",
+            f"Affiliate disclosure for {site['name']}.",
             f"<p><strong>{esc(affiliate['required_disclosure'])}</strong></p><p>{esc(affiliate['plain_language_disclosure'])}</p><p>{esc(monetized_note)}</p>",
         ),
         "privacy": (
@@ -367,7 +367,7 @@ def build_static_pages(out, site, affiliate):
         "contact": (
             "Contact",
             "Informational contact fallback without support obligations.",
-            "<p>This is an informational buyer-decision site. Five Finger Finds does not sell products directly, process orders, handle returns, or provide product support.</p><p>For product orders, warranties, delivery, or returns, use the merchant or manufacturer channel connected to the item you bought.</p>",
+            f"<p>This is an informational buyer-decision site. {esc(site['name'])} does not sell products directly, process orders, handle returns, or provide product support.</p><p>For product orders, warranties, delivery, or returns, use the merchant or manufacturer channel connected to the item you bought.</p>",
         ),
     }
     for slug, (title, description, body_text) in static_pages.items():
