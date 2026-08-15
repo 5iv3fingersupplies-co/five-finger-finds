@@ -226,8 +226,9 @@ def validate_dist(errors, dist):
         text = file.read_text(encoding="utf-8")
         parser = LinkParser()
         parser.feed(text)
-        if DISCLOSURE not in text:
-            fail(errors, f"missing affiliate disclosure in {file.relative_to(dist)}")
+        has_affiliate_link = "tag=fivefingersup-20" in text or 'rel="sponsored nofollow noopener"' in text
+        if has_affiliate_link and DISCLOSURE not in text:
+            fail(errors, f"missing affiliate disclosure near monetized links in {file.relative_to(dist)}")
         if '<link rel="canonical"' not in text:
             fail(errors, f"missing canonical in {file.relative_to(dist)}")
         if 'application/ld+json' not in text:

@@ -79,6 +79,8 @@ img{max-width:100%;height:auto}
 .content p{max-width:74ch}
 .content li{margin:.4rem 0}
 .notice{background:#fff;border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:8px;padding:.9rem 1rem;box-shadow:var(--soft-shadow)}
+.affiliate-note{max-width:74ch;background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;padding:.68rem .8rem;color:var(--muted);font-size:.92rem;box-shadow:var(--soft-shadow)}
+.affiliate-note strong{color:var(--ink)}
 .tool-shell{display:grid;grid-template-columns:minmax(0,.95fr) minmax(280px,1.05fr);gap:1.1rem;align-items:start}
 .tool-panel{border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:1.05rem;box-shadow:var(--soft-shadow)}
 .tool-form{display:grid;gap:.9rem}

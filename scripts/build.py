@@ -81,6 +81,12 @@ def disclosure_html(affiliate):
     )
 
 
+def affiliate_note(affiliate):
+    if not affiliate.get("monetization_enabled") or not affiliate.get("amazon_associates_tag", "").strip():
+        return ""
+    return f'<p class="affiliate-note"><strong>{esc(affiliate["required_disclosure"])}</strong> Product links may earn a commission at no extra cost to you.</p>'
+
+
 def nav(depth: int, site):
     return f"""
     <header class="topbar">
@@ -125,7 +131,6 @@ def layout(site, affiliate, title, description, path, body, schema=None, extra_j
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   {nav(depth, site)}
-  <div class="disclosure-ribbon"><div class="inner">{disclosure_html(affiliate)}</div></div>
   <main id="main">{body}</main>
   <footer class="footer">
     <div class="wrap">
@@ -283,7 +288,7 @@ def build_tool(out, site, affiliate, tool, sources, recommendations):
       </div>
       <div class="result-box" aria-live="polite"></div>
     </section>
-    <section class="wrap band"><h2 class="section-title">Product-fit cards</h2><div class="grid">{recs}</div></section>
+    <section class="wrap band"><h2 class="section-title">Product-fit cards</h2>{affiliate_note(affiliate)}<div class="grid">{recs}</div></section>
     <section class="content">{sources_block(tool['source_ids'], sources)}</section>
     """
     path = f"tools/{tool['slug']}/index.html"
@@ -326,7 +331,7 @@ def build_guide(out, site, affiliate, guide, sources, recommendations, tools):
       {sources_block(guide['source_ids'], sources)}
     </article>
     <section class="wrap band"><h2 class="section-title">Related tools</h2><div class="grid">{tool_links}</div></section>
-    <section class="wrap band"><h2 class="section-title">Product-fit cards</h2><div class="grid">{recs}</div></section>
+    <section class="wrap band"><h2 class="section-title">Product-fit cards</h2>{affiliate_note(affiliate)}<div class="grid">{recs}</div></section>
     """
     schema = schema_base(site, guide["title"], guide["description"], path, "Article")
     schema["headline"] = guide["title"]
@@ -347,7 +352,7 @@ def build_static_pages(out, site, affiliate):
         "about": (
             "About",
             "Five Finger Finds explains practical product decisions with static calculators and source-backed guides.",
-            "<p>Five Finger Finds is a Five Finger Supplies project for practical household, travel, auto, camping, emergency-prep, portable-power, and convenience decisions. The site is static and does not require customer accounts, checkout, fulfillment, or product support.</p><p>The calculators use deterministic browser-side JavaScript. The guides are generated from structured source records and templates.</p>",
+            f"<p>Five Finger Finds is a Five Finger Supplies project for practical household, travel, auto, camping, emergency-prep, portable-power, and convenience decisions. The site is static and does not require customer accounts, checkout, fulfillment, or product support.</p><p>The calculators use deterministic browser-side JavaScript. The guides are generated from structured source records and templates.</p>{affiliate_note(affiliate)}",
         ),
         "affiliate-disclosure": (
             "Affiliate Disclosure",
@@ -403,7 +408,7 @@ def build_seasonal_pages(out, site, affiliate, editorial, tools, guides, recomme
         <article class="content"><p class="notice"><strong>Why now:</strong> {esc(entry['reason'])}</p><h2>Decision prompts</h2><ul>{prompts}</ul><h2>Use this sequence</h2><ul><li>Open the calculator before browsing.</li><li>Read the supporting guide for setup details.</li><li>Use product-fit links only when the result confirms the need.</li><li>Follow the feed for future seasonal passes.</li></ul><h2>Skip these traps</h2><ul>{avoids}</ul></article>
         <section class="wrap band"><h2 class="section-title">Tools for this moment</h2><div class="grid">{tool_cards}</div></section>
         <section class="wrap band"><h2 class="section-title">Supporting guides</h2><div class="grid">{guide_cards}</div></section>
-        <section class="wrap band"><h2 class="section-title">Product-fit cards</h2><div class="grid">{rec_cards}</div></section>
+        <section class="wrap band"><h2 class="section-title">Product-fit cards</h2>{affiliate_note(affiliate)}<div class="grid">{rec_cards}</div></section>
         """
         path = f"seasonal/{entry['slug']}/index.html"
         write_page(out, path, layout(site, affiliate, entry["title"], entry["description"], path, body, schema_base(site, entry["title"], entry["description"], path, "Article")))
@@ -411,7 +416,7 @@ def build_seasonal_pages(out, site, affiliate, editorial, tools, guides, recomme
 
 def build_publisher_standards(out, site, affiliate, editorial):
     channels = "".join(f"<li><strong>{esc(item['channel'])}:</strong> {esc(item['implementation'])}</li>" for item in editorial.get("traffic_channels", []))
-    standards = ["Every monetized page includes the Amazon Associate disclosure.", "Product-fit cards do not rehost Amazon Program Content.", "Calculator inputs stay in the visitor browser.", "No paid placement is accepted inside the automated build.", "Volatile marketplace details are omitted unless a permitted source verifies them during the build."]
+    standards = ["Every page with outbound affiliate product links includes the Amazon Associate disclosure near those links.", "Product-fit cards do not rehost Amazon Program Content.", "Calculator inputs stay in the visitor browser.", "No paid placement is accepted inside the automated build.", "Volatile marketplace details are omitted unless a permitted source verifies them during the build."]
     body = f'<section class="page-head"><span class="tag">Publisher standards</span><h1>Useful pages first, disclosed affiliate links second</h1><p>{esc(site["name"])} is built for self-serve buyer decisions and public-safe partner review.</p></section><article class="content"><h2>Operating standards</h2><ul>{"".join(f"<li>{esc(item)}</li>" for item in standards)}</ul><h2>Traffic approach</h2><ul>{channels}</ul><h2>Partner fit</h2><p>Future direct affiliate programs should fit the audience, allow clear disclosure, and support self-serve transactions without creating a customer-support queue for this site.</p></article>'
     write_page(out, "publisher-standards/index.html", layout(site, affiliate, "Publisher Standards", "Affiliate publisher standards and no-cost traffic approach.", "publisher-standards/index.html", body, schema_base(site, "Publisher Standards", "Affiliate publisher standards.", "publisher-standards/index.html", "WebPage")))
 

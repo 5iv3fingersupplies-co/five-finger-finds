@@ -63,10 +63,16 @@ class SiteBuildTest(unittest.TestCase):
         self.assertTrue(affiliate["monetization_enabled"])
         self.assertEqual(affiliate["amazon_associates_tag"], "fivefingersup-20")
         html = (ROOT / "site/tools/power-bank-capacity-calculator/index.html").read_text(encoding="utf-8")
+        home = (ROOT / "site/index.html").read_text(encoding="utf-8")
+        about = (ROOT / "site/about/index.html").read_text(encoding="utf-8")
         self.assertNotIn("Affiliate link inactive", html)
         self.assertIn("https://www.amazon.com/s?", html)
         self.assertIn("tag=fivefingersup-20", html)
         self.assertIn('rel="sponsored nofollow noopener"', html)
+        self.assertIn("As an Amazon Associate I earn from qualifying purchases.", html)
+        self.assertNotIn("disclosure-ribbon", home)
+        self.assertNotIn("As an Amazon Associate I earn from qualifying purchases.", home)
+        self.assertIn("As an Amazon Associate I earn from qualifying purchases.", about)
 
     def test_optimization_report_runs(self):
         subprocess.run([sys.executable, "scripts/optimize.py", "--out", "reports"], cwd=ROOT, check=True)
