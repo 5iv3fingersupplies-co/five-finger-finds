@@ -40,7 +40,9 @@ def rel(depth: int, target: str) -> str:
 def absolute(base_url: str, path: str) -> str:
     if not path:
         return base_url.rstrip("/") + "/"
-    return base_url.rstrip("/") + "/" + path.strip("/") + "/"
+    clean = path.strip("/")
+    suffix = "" if "." in clean.rsplit("/", 1)[-1] else "/"
+    return base_url.rstrip("/") + "/" + clean + suffix
 
 
 def esc(value) -> str:
@@ -85,7 +87,7 @@ def nav(depth: int, site):
       <nav class="nav" aria-label="Main navigation">
         <a class="brand" href="{rel(depth, 'index.html')}"><span class="brand-mark">5F</span><span>{esc(site['name'])}</span></a>
         <div class="nav-links">
-          <a href="{rel(depth, 'start-here/index.html')}">Start Here</a>
+          <a href="{rel(depth, 'start-here/index.html')}">Start</a>
           <a href="{rel(depth, 'tools/index.html')}">Tools</a>
           <a href="{rel(depth, 'seasonal/index.html')}">Seasonal</a>
           <a href="{rel(depth, 'guides/index.html')}">Guides</a>
@@ -117,9 +119,6 @@ def layout(site, affiliate, title, description, path, body, schema=None, extra_j
   <meta property="og:url" content="{esc(url)}">
   <meta property="og:site_name" content="{esc(site['name'])}">
   <link rel="alternate" type="application/atom+xml" title="{esc(site['name'])} updates" href="{rel(depth, 'feed.xml')}">
-  <link rel="alternate" type="application/atom+xml" title="{esc(site['name'])} updates" href="{rel(depth, 'feed.xml')}">
-  <link rel="alternate" type="application/atom+xml" title="{esc(site['name'])} updates" href="{rel(depth, 'feed.xml')}">
-  <link rel="alternate" type="application/atom+xml" title="{esc(site['name'])} updates" href="{rel(depth, 'feed.xml')}">
   <link rel="stylesheet" href="{rel(depth, 'assets/css/site.css')}">
   {script}
 </head>
@@ -136,7 +135,7 @@ def layout(site, affiliate, title, description, path, body, schema=None, extra_j
       </div>
       <div class="nav-links">
         <a href="{rel(depth, 'about/index.html')}">About</a>
-        <a href="{rel(depth, 'publisher-standards/index.html')}">Publisher Standards</a>
+        <a href="{rel(depth, 'publisher-standards/index.html')}">Standards</a>
         <a href="{rel(depth, 'feed.xml')}">RSS</a>
         <a href="{rel(depth, 'sitemap.xml')}">Sitemap</a>
       </div>

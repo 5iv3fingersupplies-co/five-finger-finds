@@ -58,3 +58,9 @@ This repository is meant to contain only static-site code, public source records
 - Added 12 seasonal buyer-intent pages generated from structured data.
 - Added a start-here routing page and publisher-standards page to improve trust and partner readiness.
 - Extended deterministic optimization reports to score seasonal and traffic-channel opportunities without paid APIs.
+
+## Design credibility upgrade
+
+- Reworked the visual system with stronger typography, whitespace, grid balance, shadows, and subtle texture.
+- Simplified menu labels to one-word navigation where practical.
+- Improved cards, tool panels, hero imagery, mobile spacing, focus states, and visual hierarchy without adding paid services or heavy dependencies.

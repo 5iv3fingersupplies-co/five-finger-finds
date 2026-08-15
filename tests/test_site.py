@@ -52,6 +52,12 @@ class SiteBuildTest(unittest.TestCase):
         self.assertGreaterEqual(len(editorial["traffic_channels"]), 3)
         self.assertIn("<feed", (ROOT / "site/feed.xml").read_text(encoding="utf-8"))
 
+    def test_design_system_polish(self):
+        css=(ROOT/"assets/css/site.css").read_text(encoding="utf-8")
+        self.assertIn("--font-display", css)
+        self.assertIn("repeating-linear-gradient", css)
+        self.assertNotIn("vw", css)
+
     def test_monetization_uses_supplied_public_tag(self):
         affiliate = json.loads((ROOT / "data/affiliate.json").read_text(encoding="utf-8"))
         self.assertTrue(affiliate["monetization_enabled"])
