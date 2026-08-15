@@ -51,3 +51,10 @@ The report ranks pages and topics by likely next-best work. It does not call pai
 ## Public safety
 
 This repository is meant to contain only static-site code, public source records, templates, and generated output rules. Do not commit `.env` files, API keys, private JARVIS/core code, browser profiles, logs, customer data, or private company documents.
+
+## Affiliate source upgrade
+
+- Added a static Atom feed as a free owned return channel.
+- Added 12 seasonal buyer-intent pages generated from structured data.
+- Added a start-here routing page and publisher-standards page to improve trust and partner readiness.
+- Extended deterministic optimization reports to score seasonal and traffic-channel opportunities without paid APIs.

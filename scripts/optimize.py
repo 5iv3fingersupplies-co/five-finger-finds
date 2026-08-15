@@ -296,6 +296,12 @@ def build_markdown(report: dict) -> str:
     for index, item in enumerate(report["top_page_actions"][:10], 1):
         reasons = "; ".join(item["reasons"])
         lines.append(f"{index}. {item['title']} ({item['path']}) - score {item['score']}: {reasons}")
+    lines.extend(["", "## Seasonal Strategy"])
+    for index, item in enumerate(report.get("seasonal_actions", [])[:10], 1):
+        lines.append(f"{index}. {item['title']} ({item['path']}) - score {item['score']}: {item['reason']}")
+    lines.extend(["", "## Source-Derived Actions"])
+    for item in report.get("source_strategy_actions", []):
+        lines.append(f"- {item}")
     lines.extend(["", "## Content Gap Queue"])
     for index, item in enumerate(report["content_gap_actions"][:10], 1):
         status = "new gap" if item["missing"] else "covered, consider supporting angle"
@@ -320,6 +326,10 @@ def main() -> int:
     guides = load_json("pages.json")
     recommendations = {item["id"]: item for item in load_json("recommendations.json")}
     topics = load_json("optimization_topics.json")
+    editorial = load_json("editorial_calendar.json")
+    editorial = load_json("editorial_calendar.json")
+    editorial = load_json("editorial_calendar.json")
+    editorial = load_json("editorial_calendar.json")
 
     page_metrics, page_files = load_search_page_metrics(site, input_dir)
     query_metrics, query_files = load_search_query_metrics(input_dir)
@@ -336,6 +346,10 @@ def main() -> int:
     corpus = json.dumps({"tools": tools, "guides": guides}, ensure_ascii=False).lower()
     content_gap_actions = [topic_coverage_score(topic, corpus, category_counts) for topic in topics]
     content_gap_actions.sort(key=lambda item: item["score"], reverse=True)
+    seasonal_actions = []
+    for entry in editorial.get("seasonal_pages", []):
+        seasonal_actions.append({"score": 24 + len(entry.get("recommendation_ids", [])) * 2, "title": entry["title"], "path": f"seasonal/{entry['slug']}", "category": entry["category"], "reason": "seasonal buyer-intent page from supplied affiliate strategy"})
+    seasonal_actions.sort(key=lambda item: item["score"], reverse=True)
 
     report = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -352,11 +366,15 @@ def main() -> int:
             "recommendations": len(recommendations),
             "categories": sorted(category_counts),
             "category_counts": dict(sorted(category_counts.items())),
+            "seasonal_pages": len(editorial.get("seasonal_pages", [])),
+            "traffic_channels": editorial.get("traffic_channels", []),
         },
         "amazon_summary": amazon_metrics,
         "top_queries": query_metrics[:20],
         "top_page_actions": page_actions[:20],
         "content_gap_actions": content_gap_actions[:20],
+        "seasonal_actions": seasonal_actions[:20],
+        "source_strategy_actions": editorial.get("source_action_items", []),
     }
 
     (out / "optimization-report.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")

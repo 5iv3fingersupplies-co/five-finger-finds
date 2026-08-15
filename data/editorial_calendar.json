@@ -1,0 +1,425 @@
+{
+  "strategy_source_summary": "Adapted from supplied affiliate marketing materials: own the site, build topical authority, publish consistently, favor buyer-intent pages, reduce friction, and keep a return channel.",
+  "no_cost_adaptation": "Static seasonal pages, Atom feed, internal links, and deterministic optimization reports replace paid hosting, paid plugins, paid keyword tools, and paid email systems.",
+  "traffic_channels": [
+    {
+      "channel": "Organic search",
+      "implementation": "Seasonal and product-fit pages create clearer long-tail entry points around buyer intent."
+    },
+    {
+      "channel": "Owned return traffic",
+      "implementation": "Atom feed lets visitors follow new pages without accounts, email storage, or a paid newsletter service."
+    },
+    {
+      "channel": "Partner readiness",
+      "implementation": "Publisher standards page explains disclosure, evidence, and no paid placement rules for future direct affiliate approvals."
+    },
+    {
+      "channel": "Manual-free optimization",
+      "implementation": "Scheduled reports score tools, product-fit pages, seasonal pages, and optional private exports without calling paid APIs."
+    }
+  ],
+  "source_action_items": [
+    "Prioritize transactional page formats: tool pages, product-fit pages, comparison-style decision pages, and seasonal checklists.",
+    "Build internal links from supporting pages to the most relevant calculator and product-fit page.",
+    "Use trust cues before monetized links: disclosure, no account, private inputs, and evidence-first limitations.",
+    "Do not add paid email, paid keyword, paid AI, ads, or analytics dependencies."
+  ],
+  "seasonal_pages": [
+    {
+      "slug": "january-reset-portable-air-pump-selector",
+      "month": "January",
+      "theme": "reset",
+      "title": "January reset: portable Air-Pump Selector",
+      "category": "Convenience",
+      "description": "A seasonal decision page for using Portable Air-Pump Selector with Portable Fan for Power Outages before opening product-fit links.",
+      "reason": "Reset the workspace and choose only the supplies the workflow proves you need.",
+      "tool_slugs": [
+        "portable-air-pump-selector",
+        "luggage-size-checker"
+      ],
+      "guide_slugs": [
+        "portable-fan-for-power-outages",
+        "usb-c-charger-buying-checklist"
+      ],
+      "recommendation_ids": [
+        "air_pump_high_volume",
+        "tire_inflator_12v",
+        "needle_inflator"
+      ],
+      "decision_prompts": [
+        "What measurement, count, or requirement changed this month?",
+        "Which current item still solves the job without a new purchase?",
+        "Which product category is justified by the calculator result?"
+      ],
+      "avoid_prompts": [
+        "Do not buy a broad bundle when a focused item solves the task.",
+        "Do not rely on live marketplace claims that this static site cannot verify.",
+        "Do not add a new tool until the existing workflow has a clear gap."
+      ]
+    },
+    {
+      "slug": "february-small-space-setup-power-bank-capacity-calculator",
+      "month": "February",
+      "theme": "small-space setup",
+      "title": "February small-space setup: power-Bank Capacity Calculator",
+      "category": "Portable Power",
+      "description": "A seasonal decision page for using Power-Bank Capacity Calculator with USB-C Charger Buying Checklist before opening product-fit links.",
+      "reason": "Tighten the setup before the season gets busy.",
+      "tool_slugs": [
+        "power-bank-capacity-calculator",
+        "car-emergency-kit-builder"
+      ],
+      "guide_slugs": [
+        "usb-c-charger-buying-checklist",
+        "portable-fan-for-power-outages"
+      ],
+      "recommendation_ids": [
+        "compact_power_bank",
+        "laptop_power_bank",
+        "usb_c_charger",
+        "tire_inflator_12v"
+      ],
+      "decision_prompts": [
+        "What measurement, count, or requirement changed this month?",
+        "Which current item still solves the job without a new purchase?",
+        "Which product category is justified by the calculator result?"
+      ],
+      "avoid_prompts": [
+        "Do not buy a broad bundle when a focused item solves the task.",
+        "Do not rely on live marketplace claims that this static site cannot verify.",
+        "Do not add a new tool until the existing workflow has a clear gap."
+      ]
+    },
+    {
+      "slug": "march-spring-planning-camping-power-calculator",
+      "month": "March",
+      "theme": "spring planning",
+      "title": "March spring planning: camping Power Calculator",
+      "category": "Camping",
+      "description": "A seasonal decision page for using Camping Power Calculator with Solar Panel Match for Camping before opening product-fit links.",
+      "reason": "Measure, sort, and prepare before buying fresh supplies.",
+      "tool_slugs": [
+        "camping-power-calculator",
+        "tire-inflator-requirements-helper"
+      ],
+      "guide_slugs": [
+        "solar-panel-match-for-camping",
+        "tent-fan-and-lantern-planning"
+      ],
+      "recommendation_ids": [
+        "camp_battery",
+        "folding_solar_panel",
+        "lantern_usb",
+        "needle_inflator"
+      ],
+      "decision_prompts": [
+        "What measurement, count, or requirement changed this month?",
+        "Which current item still solves the job without a new purchase?",
+        "Which product category is justified by the calculator result?"
+      ],
+      "avoid_prompts": [
+        "Do not buy a broad bundle when a focused item solves the task.",
+        "Do not rely on live marketplace claims that this static site cannot verify.",
+        "Do not add a new tool until the existing workflow has a clear gap."
+      ]
+    },
+    {
+      "slug": "april-cleanup-pass-luggage-size-checker",
+      "month": "April",
+      "theme": "cleanup pass",
+      "title": "April cleanup pass: luggage-Size Checker",
+      "category": "Travel",
+      "description": "A seasonal decision page for using Luggage-Size Checker with Travel Adapter vs Voltage Converter before opening product-fit links.",
+      "reason": "Remove friction from the routine before adding more gear.",
+      "tool_slugs": [
+        "luggage-size-checker",
+        "portable-fan-sizing-tool"
+      ],
+      "guide_slugs": [
+        "travel-adapter-vs-voltage-converter",
+        "camping-power-station-sizing"
+      ],
+      "recommendation_ids": [
+        "carry_on_luggage",
+        "luggage_scale",
+        "packing_cubes",
+        "compact_power_bank"
+      ],
+      "decision_prompts": [
+        "What measurement, count, or requirement changed this month?",
+        "Which current item still solves the job without a new purchase?",
+        "Which product category is justified by the calculator result?"
+      ],
+      "avoid_prompts": [
+        "Do not buy a broad bundle when a focused item solves the task.",
+        "Do not rely on live marketplace claims that this static site cannot verify.",
+        "Do not add a new tool until the existing workflow has a clear gap."
+      ]
+    },
+    {
+      "slug": "may-busy-week-buffer-car-emergency-kit-builder",
+      "month": "May",
+      "theme": "busy-week buffer",
+      "title": "May busy-week buffer: car Emergency-Kit Builder",
+      "category": "Auto",
+      "description": "A seasonal decision page for using Car Emergency-Kit Builder with Hot Weather Car Kit before opening product-fit links.",
+      "reason": "Build a light backup plan for busier weeks.",
+      "tool_slugs": [
+        "car-emergency-kit-builder",
+        "travel-adapter-finder"
+      ],
+      "guide_slugs": [
+        "hot-weather-car-kit",
+        "solar-panel-match-for-camping"
+      ],
+      "recommendation_ids": [
+        "roadside_kit",
+        "jump_starter",
+        "emergency_blanket",
+        "laptop_power_bank"
+      ],
+      "decision_prompts": [
+        "What measurement, count, or requirement changed this month?",
+        "Which current item still solves the job without a new purchase?",
+        "Which product category is justified by the calculator result?"
+      ],
+      "avoid_prompts": [
+        "Do not buy a broad bundle when a focused item solves the task.",
+        "Do not rely on live marketplace claims that this static site cannot verify.",
+        "Do not add a new tool until the existing workflow has a clear gap."
+      ]
+    },
+    {
+      "slug": "june-travel-and-outdoor-check-tire-inflator-requirements-helper",
+      "month": "June",
+      "theme": "travel and outdoor check",
+      "title": "June travel and outdoor check: tire and Inflator Requirements Helper",
+      "category": "Auto",
+      "description": "A seasonal decision page for using Tire and Inflator Requirements Helper with Vehicle Tire Inflator Checklist before opening product-fit links.",
+      "reason": "Check portable, compact, or weather-ready options before browsing.",
+      "tool_slugs": [
+        "tire-inflator-requirements-helper",
+        "household-emergency-supply-calculator"
+      ],
+      "guide_slugs": [
+        "vehicle-tire-inflator-checklist",
+        "air-mattress-pump-selector-guide"
+      ],
+      "recommendation_ids": [
+        "tire_inflator_12v",
+        "tire_gauge",
+        "roadside_kit",
+        "usb_c_charger"
+      ],
+      "decision_prompts": [
+        "What measurement, count, or requirement changed this month?",
+        "Which current item still solves the job without a new purchase?",
+        "Which product category is justified by the calculator result?"
+      ],
+      "avoid_prompts": [
+        "Do not buy a broad bundle when a focused item solves the task.",
+        "Do not rely on live marketplace claims that this static site cannot verify.",
+        "Do not add a new tool until the existing workflow has a clear gap."
+      ]
+    },
+    {
+      "slug": "july-midyear-audit-portable-fan-sizing-tool",
+      "month": "July",
+      "theme": "midyear audit",
+      "title": "July midyear audit: portable-Fan Sizing Tool",
+      "category": "Convenience",
+      "description": "A seasonal decision page for using Portable-Fan Sizing Tool with Portable Fan for Power Outages before opening product-fit links.",
+      "reason": "Compare what is actually being used against what is stored.",
+      "tool_slugs": [
+        "portable-fan-sizing-tool",
+        "product-comparison-selection-tool"
+      ],
+      "guide_slugs": [
+        "portable-fan-for-power-outages",
+        "pool-float-and-inflatable-pump-guide"
+      ],
+      "recommendation_ids": [
+        "usb_fan",
+        "battery_fan",
+        "compact_power_bank",
+        "camp_battery"
+      ],
+      "decision_prompts": [
+        "What measurement, count, or requirement changed this month?",
+        "Which current item still solves the job without a new purchase?",
+        "Which product category is justified by the calculator result?"
+      ],
+      "avoid_prompts": [
+        "Do not buy a broad bundle when a focused item solves the task.",
+        "Do not rely on live marketplace claims that this static site cannot verify.",
+        "Do not add a new tool until the existing workflow has a clear gap."
+      ]
+    },
+    {
+      "slug": "august-back-to-routine-setup-travel-adapter-finder",
+      "month": "August",
+      "theme": "back-to-routine setup",
+      "title": "August back-to-routine setup: travel-Adapter Finder",
+      "category": "Travel",
+      "description": "A seasonal decision page for using Travel-Adapter Finder with Packing Cubes vs Compression Bags before opening product-fit links.",
+      "reason": "Prepare repeatable routines before the next packed calendar.",
+      "tool_slugs": [
+        "travel-adapter-finder",
+        "portable-air-pump-selector"
+      ],
+      "guide_slugs": [
+        "packing-cubes-vs-compression-bags",
+        "vehicle-tire-inflator-checklist"
+      ],
+      "recommendation_ids": [
+        "universal_adapter",
+        "grounded_adapter",
+        "usb_c_charger",
+        "folding_solar_panel"
+      ],
+      "decision_prompts": [
+        "What measurement, count, or requirement changed this month?",
+        "Which current item still solves the job without a new purchase?",
+        "Which product category is justified by the calculator result?"
+      ],
+      "avoid_prompts": [
+        "Do not buy a broad bundle when a focused item solves the task.",
+        "Do not rely on live marketplace claims that this static site cannot verify.",
+        "Do not add a new tool until the existing workflow has a clear gap."
+      ]
+    },
+    {
+      "slug": "september-fall-organization-household-emergency-supply-calculator",
+      "month": "September",
+      "theme": "fall organization",
+      "title": "September fall organization: household Emergency-Supply Calculator",
+      "category": "Emergency Prep",
+      "description": "A seasonal decision page for using Household Emergency-Supply Calculator with Family Emergency Supply Refresh Routine before opening product-fit links.",
+      "reason": "Tighten labels, storage, and repeatable planning steps.",
+      "tool_slugs": [
+        "household-emergency-supply-calculator",
+        "power-bank-capacity-calculator"
+      ],
+      "guide_slugs": [
+        "family-emergency-supply-refresh-routine",
+        "tire-pressure-gauge-basics"
+      ],
+      "recommendation_ids": [
+        "water_container",
+        "weather_radio_product",
+        "first_aid_kit",
+        "lantern_usb"
+      ],
+      "decision_prompts": [
+        "What measurement, count, or requirement changed this month?",
+        "Which current item still solves the job without a new purchase?",
+        "Which product category is justified by the calculator result?"
+      ],
+      "avoid_prompts": [
+        "Do not buy a broad bundle when a focused item solves the task.",
+        "Do not rely on live marketplace claims that this static site cannot verify.",
+        "Do not add a new tool until the existing workflow has a clear gap."
+      ]
+    },
+    {
+      "slug": "october-holiday-prep-product-comparison-selection-tool",
+      "month": "October",
+      "theme": "holiday prep",
+      "title": "October holiday prep: product Comparison and Selection Tool",
+      "category": "Decision Tool",
+      "description": "A seasonal decision page for using Product Comparison and Selection Tool with Solar Panel Match for Camping before opening product-fit links.",
+      "reason": "Prepare supplies before the year-end rush.",
+      "tool_slugs": [
+        "product-comparison-selection-tool",
+        "camping-power-calculator"
+      ],
+      "guide_slugs": [
+        "solar-panel-match-for-camping",
+        "car-emergency-kit-for-commuters"
+      ],
+      "recommendation_ids": [
+        "notebook_labels",
+        "storage_bins",
+        "measuring_tape",
+        "carry_on_luggage"
+      ],
+      "decision_prompts": [
+        "What measurement, count, or requirement changed this month?",
+        "Which current item still solves the job without a new purchase?",
+        "Which product category is justified by the calculator result?"
+      ],
+      "avoid_prompts": [
+        "Do not buy a broad bundle when a focused item solves the task.",
+        "Do not rely on live marketplace claims that this static site cannot verify.",
+        "Do not add a new tool until the existing workflow has a clear gap."
+      ]
+    },
+    {
+      "slug": "november-hosting-and-gifting-check-portable-air-pump-selector",
+      "month": "November",
+      "theme": "hosting and gifting check",
+      "title": "November hosting and gifting check: portable Air-Pump Selector",
+      "category": "Convenience",
+      "description": "A seasonal decision page for using Portable Air-Pump Selector with Portable Fan for Power Outages before opening product-fit links.",
+      "reason": "Plan quantities and setup needs before last-minute buying.",
+      "tool_slugs": [
+        "portable-air-pump-selector",
+        "luggage-size-checker"
+      ],
+      "guide_slugs": [
+        "portable-fan-for-power-outages",
+        "cold-weather-car-kit"
+      ],
+      "recommendation_ids": [
+        "air_pump_high_volume",
+        "tire_inflator_12v",
+        "needle_inflator",
+        "luggage_scale"
+      ],
+      "decision_prompts": [
+        "What measurement, count, or requirement changed this month?",
+        "Which current item still solves the job without a new purchase?",
+        "Which product category is justified by the calculator result?"
+      ],
+      "avoid_prompts": [
+        "Do not buy a broad bundle when a focused item solves the task.",
+        "Do not rely on live marketplace claims that this static site cannot verify.",
+        "Do not add a new tool until the existing workflow has a clear gap."
+      ]
+    },
+    {
+      "slug": "december-year-end-simplify-power-bank-capacity-calculator",
+      "month": "December",
+      "theme": "year-end simplify",
+      "title": "December year-end simplify: power-Bank Capacity Calculator",
+      "category": "Portable Power",
+      "description": "A seasonal decision page for using Power-Bank Capacity Calculator with USB-C Charger Buying Checklist before opening product-fit links.",
+      "reason": "Document what worked and simplify the next cycle.",
+      "tool_slugs": [
+        "power-bank-capacity-calculator",
+        "car-emergency-kit-builder"
+      ],
+      "guide_slugs": [
+        "usb-c-charger-buying-checklist",
+        "hot-weather-car-kit"
+      ],
+      "recommendation_ids": [
+        "compact_power_bank",
+        "laptop_power_bank",
+        "usb_c_charger",
+        "packing_cubes"
+      ],
+      "decision_prompts": [
+        "What measurement, count, or requirement changed this month?",
+        "Which current item still solves the job without a new purchase?",
+        "Which product category is justified by the calculator result?"
+      ],
+      "avoid_prompts": [
+        "Do not buy a broad bundle when a focused item solves the task.",
+        "Do not rely on live marketplace claims that this static site cannot verify.",
+        "Do not add a new tool until the existing workflow has a clear gap."
+      ]
+    }
+  ]
+}

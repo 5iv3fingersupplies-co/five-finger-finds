@@ -109,6 +109,7 @@ def validate_data(errors):
     pages = load("pages.json")
     recs = load("recommendations.json")
     topics = load("optimization_topics.json")
+    editorial = load("editorial_calendar.json")
 
     if automation.get("max_incremental_cost_usd") != 0:
         fail(errors, "automation cost cap is not fixed at 0")
@@ -147,6 +148,24 @@ def validate_data(errors):
         fail(errors, "fewer than 10 tools")
     if len(pages) < 25:
         fail(errors, "fewer than 25 supporting evergreen pages")
+    tool_slugs = {tool["slug"] for tool in tools}; guide_slugs = {page["slug"] for page in pages}; rec_ids = {rec["id"] for rec in recs}
+    if len(editorial.get("seasonal_pages", [])) < 12:
+        fail(errors, "fewer than 12 seasonal pages")
+    seasonal_slugs = set()
+    for entry in editorial.get("seasonal_pages", []):
+        if entry["slug"] in seasonal_slugs:
+            fail(errors, f"duplicate seasonal slug {entry['slug']}")
+        seasonal_slugs.add(entry["slug"])
+        scan_text(errors, f"seasonal:{entry['slug']}", json.dumps(entry))
+        for slug in entry.get("tool_slugs", []):
+            if slug not in tool_slugs:
+                fail(errors, f"unknown seasonal tool {slug}")
+        for slug in entry.get("guide_slugs", []):
+            if slug not in guide_slugs:
+                fail(errors, f"unknown seasonal guide {slug}")
+        for rec_id in entry.get("recommendation_ids", []):
+            if rec_id not in rec_ids:
+                fail(errors, f"unknown seasonal recommendation {rec_id}")
 
     fingerprints = [(p["slug"], fingerprint(p)) for p in pages]
     for i, (slug_a, fp_a) in enumerate(fingerprints):
@@ -219,9 +238,12 @@ def validate_dist(errors, dist):
                 fail(errors, f"broken internal link from {file.relative_to(dist)} to {href}")
         if "click-tracker.js" not in text:
             fail(errors, f"missing click tracker in {file.relative_to(dist)}")
-    for required in ["sitemap.xml", "robots.txt", "assets/js/tools.js", "assets/js/click-tracker.js", "assets/css/site.css"]:
+    for required in ["sitemap.xml", "robots.txt", "feed.xml", "start-here/index.html", "seasonal/index.html", "publisher-standards/index.html", "assets/js/tools.js", "assets/js/click-tracker.js", "assets/css/site.css"]:
         if not (dist / required).exists():
             fail(errors, f"missing generated asset {required}")
+    feed = (dist / "feed.xml").read_text(encoding="utf-8") if (dist / "feed.xml").exists() else ""
+    if "<feed" not in feed:
+        fail(errors, "feed.xml is not a valid Atom feed")
 
 
 def validate_workflows(errors):

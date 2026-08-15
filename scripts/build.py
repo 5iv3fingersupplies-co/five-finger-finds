@@ -59,7 +59,8 @@ def load_all():
     tools = load_json("tools.json")
     guides = load_json("pages.json")
     recommendations = {item["id"]: item for item in load_json("recommendations.json")}
-    return site, affiliate, automation, sources, tools, guides, recommendations
+    editorial = load_json("editorial_calendar.json")
+    return site, affiliate, automation, sources, tools, guides, recommendations, editorial
 
 
 def affiliate_href(affiliate, rec):
@@ -84,7 +85,9 @@ def nav(depth: int, site):
       <nav class="nav" aria-label="Main navigation">
         <a class="brand" href="{rel(depth, 'index.html')}"><span class="brand-mark">5F</span><span>{esc(site['name'])}</span></a>
         <div class="nav-links">
+          <a href="{rel(depth, 'start-here/index.html')}">Start Here</a>
           <a href="{rel(depth, 'tools/index.html')}">Tools</a>
+          <a href="{rel(depth, 'seasonal/index.html')}">Seasonal</a>
           <a href="{rel(depth, 'guides/index.html')}">Guides</a>
           <a href="{rel(depth, 'affiliate-disclosure/index.html')}">Disclosure</a>
           <a href="{rel(depth, 'privacy/index.html')}">Privacy</a>
@@ -113,6 +116,10 @@ def layout(site, affiliate, title, description, path, body, schema=None, extra_j
   <meta property="og:type" content="website">
   <meta property="og:url" content="{esc(url)}">
   <meta property="og:site_name" content="{esc(site['name'])}">
+  <link rel="alternate" type="application/atom+xml" title="{esc(site['name'])} updates" href="{rel(depth, 'feed.xml')}">
+  <link rel="alternate" type="application/atom+xml" title="{esc(site['name'])} updates" href="{rel(depth, 'feed.xml')}">
+  <link rel="alternate" type="application/atom+xml" title="{esc(site['name'])} updates" href="{rel(depth, 'feed.xml')}">
+  <link rel="alternate" type="application/atom+xml" title="{esc(site['name'])} updates" href="{rel(depth, 'feed.xml')}">
   <link rel="stylesheet" href="{rel(depth, 'assets/css/site.css')}">
   {script}
 </head>
@@ -129,7 +136,8 @@ def layout(site, affiliate, title, description, path, body, schema=None, extra_j
       </div>
       <div class="nav-links">
         <a href="{rel(depth, 'about/index.html')}">About</a>
-        <a href="{rel(depth, 'contact/index.html')}">Contact</a>
+        <a href="{rel(depth, 'publisher-standards/index.html')}">Publisher Standards</a>
+        <a href="{rel(depth, 'feed.xml')}">RSS</a>
         <a href="{rel(depth, 'sitemap.xml')}">Sitemap</a>
       </div>
     </div>
@@ -198,19 +206,22 @@ def write_page(out, rel_path, html_text):
     path.write_text(html_text, encoding="utf-8", newline="\n")
 
 
-def build_home(out, site, affiliate, tools, guides):
+def build_home(out, site, affiliate, tools, guides, editorial):
     visual_icons = ["air-pump.svg", "power-bank.svg", "car-kit.svg", "house-kit.svg"]
     tiles = []
     for label, icon in zip(["Inflate", "Charge", "Prepare", "Pack"], visual_icons):
         tiles.append(f'<div class="visual-tile"><img src="assets/img/{icon}" alt=""><span>{label}</span></div>')
     tool_cards = "\n".join(card(t["title"], t["description"], f"tools/{t['slug']}/index.html", f"assets/img/{t['icon']}", t["category"]) for t in tools[:6])
     guide_cards = "\n".join(card(g["title"], g["description"], f"guides/{g['slug']}/index.html", None, g["category"]) for g in guides[:6])
+    seasonal_cards = "\n".join(card(e["title"], e["description"], f"seasonal/{e['slug']}/index.html", None, e["month"]) for e in editorial.get("seasonal_pages", [])[:4])
+    cue_row = '<div class="cue-row"><span class="cue">Free tools</span><span class="cue">No account</span><span class="cue">Private inputs</span><span class="cue">Affiliate disclosed</span></div>'
     body = f"""
     <section class="hero">
       <div>
         <span class="tag">Practical buyer-decision tools</span>
         <h1>{esc(site['name'])}</h1>
         <p>{esc(site['description'])}</p>
+        {cue_row}
         <div class="hero-actions">
           <a class="button" href="tools/index.html">Use the tools</a>
           <a class="button secondary" href="guides/index.html">Browse guides</a>
@@ -220,6 +231,7 @@ def build_home(out, site, affiliate, tools, guides):
     </section>
     <section class="band"><div class="wrap"><h2 class="section-title">Launch tools</h2><div class="grid">{tool_cards}</div></div></section>
     <section class="band"><div class="wrap"><h2 class="section-title">Evergreen guides</h2><div class="grid">{guide_cards}</div></div></section>
+    <section class="band"><div class="wrap"><h2 class="section-title">Seasonal buyer intent</h2><div class="grid">{seasonal_cards}</div><p class="feed-note"><a href="feed.xml">Follow the free update feed</a> for new calculator-first pages without an account.</p></div></section>
     """
     schema = {
         "@context": "https://schema.org",
@@ -360,6 +372,68 @@ def build_static_pages(out, site, affiliate):
         write_page(out, path, layout(site, affiliate, title, description, path, body, schema_base(site, title, description, path, "WebPage")))
 
 
+
+def build_start_here(out, site, affiliate, tools, guides, editorial):
+    first_tools = "\n".join(card(t["title"], t["description"], f"../tools/{t['slug']}/index.html", f"../assets/img/{t['icon']}", t["category"]) for t in tools[:4])
+    first_guides = "\n".join(card(g["title"], g["description"], f"../guides/{g['slug']}/index.html", None, g["category"]) for g in guides[:4])
+    seasonal_cards = "\n".join(card(e["title"], e["description"], f"../seasonal/{e['slug']}/index.html", None, e["month"]) for e in editorial.get("seasonal_pages", [])[:4])
+    body = f"""
+    <section class="page-head"><span class="tag">Start here</span><h1>Start with the decision, not the cart</h1><p>Use one calculator, confirm the source-backed constraint, then open only product-fit links that match the result.</p></section>
+    <section class="decision-strip"><div><strong>Measure</strong><span>Get the requirement.</span></div><div><strong>Narrow</strong><span>Pick the category.</span></div><div><strong>Decide</strong><span>Leave only when the fit is clear.</span></div></section>
+    <section class="wrap"><h2 class="section-title">Best first tools</h2><div class="grid">{first_tools}</div></section>
+    <section class="wrap"><h2 class="section-title">Seasonal entry points</h2><div class="grid">{seasonal_cards}</div></section>
+    <section class="wrap"><h2 class="section-title">Trust-building guides</h2><div class="grid">{first_guides}</div></section>
+    """
+    write_page(out, "start-here/index.html", layout(site, affiliate, "Start Here", "Fast routing to the right tool, guide, or seasonal buyer-decision page.", "start-here/index.html", body, schema_base(site, "Start Here", "Fast routing to the right decision page.", "start-here/index.html", "WebPage")))
+
+
+def build_seasonal_pages(out, site, affiliate, editorial, tools, guides, recommendations):
+    tools_by_slug = {tool["slug"]: tool for tool in tools}
+    guides_by_slug = {guide["slug"]: guide for guide in guides}
+    index_cards = "\n".join(card(e["title"], e["description"], f"{e['slug']}/index.html", None, e["month"]) for e in editorial.get("seasonal_pages", []))
+    body = f'<section class="page-head"><span class="tag">Seasonal intent</span><h1>Seasonal buyer-decision pages</h1><p>Recurring buying moments mapped to calculators, guides, and disclosed product-fit links.</p></section><section class="wrap"><div class="grid">{index_cards}</div></section>'
+    write_page(out, "seasonal/index.html", layout(site, affiliate, "Seasonal Buyer Decisions", "Seasonal buyer-decision pages for practical household and travel needs.", "seasonal/index.html", body, schema_base(site, "Seasonal Buyer Decisions", "Seasonal buyer-decision pages.", "seasonal/index.html", "CollectionPage")))
+    for entry in editorial.get("seasonal_pages", []):
+        tool_cards = "\n".join(card(t["title"], t["description"], f"../../tools/{t['slug']}/index.html", f"../../assets/img/{t['icon']}", t["category"]) for t in (tools_by_slug[s] for s in entry.get("tool_slugs", []) if s in tools_by_slug))
+        guide_cards = "\n".join(card(g["title"], g["description"], f"../../guides/{g['slug']}/index.html", None, g["category"]) for g in (guides_by_slug[s] for s in entry.get("guide_slugs", []) if s in guides_by_slug))
+        rec_cards = recommendation_cards([rid for rid in entry.get("recommendation_ids", []) if rid in recommendations], recommendations, affiliate, 2)
+        prompts = "".join(f"<li>{esc(item)}</li>" for item in entry.get("decision_prompts", []))
+        avoids = "".join(f"<li>{esc(item)}</li>" for item in entry.get("avoid_prompts", []))
+        body = f"""
+        <section class="page-head"><span class="tag">{esc(entry['month'])}</span><h1>{esc(entry['title'])}</h1><p>{esc(entry['description'])}</p></section>
+        <article class="content"><p class="notice"><strong>Why now:</strong> {esc(entry['reason'])}</p><h2>Decision prompts</h2><ul>{prompts}</ul><h2>Use this sequence</h2><ul><li>Open the calculator before browsing.</li><li>Read the supporting guide for setup details.</li><li>Use product-fit links only when the result confirms the need.</li><li>Follow the feed for future seasonal passes.</li></ul><h2>Skip these traps</h2><ul>{avoids}</ul></article>
+        <section class="wrap band"><h2 class="section-title">Tools for this moment</h2><div class="grid">{tool_cards}</div></section>
+        <section class="wrap band"><h2 class="section-title">Supporting guides</h2><div class="grid">{guide_cards}</div></section>
+        <section class="wrap band"><h2 class="section-title">Product-fit cards</h2><div class="grid">{rec_cards}</div></section>
+        """
+        path = f"seasonal/{entry['slug']}/index.html"
+        write_page(out, path, layout(site, affiliate, entry["title"], entry["description"], path, body, schema_base(site, entry["title"], entry["description"], path, "Article")))
+
+
+def build_publisher_standards(out, site, affiliate, editorial):
+    channels = "".join(f"<li><strong>{esc(item['channel'])}:</strong> {esc(item['implementation'])}</li>" for item in editorial.get("traffic_channels", []))
+    standards = ["Every monetized page includes the Amazon Associate disclosure.", "Product-fit cards do not rehost Amazon Program Content.", "Calculator inputs stay in the visitor browser.", "No paid placement is accepted inside the automated build.", "Volatile marketplace details are omitted unless a permitted source verifies them during the build."]
+    body = f'<section class="page-head"><span class="tag">Publisher standards</span><h1>Useful pages first, disclosed affiliate links second</h1><p>{esc(site["name"])} is built for self-serve buyer decisions and public-safe partner review.</p></section><article class="content"><h2>Operating standards</h2><ul>{"".join(f"<li>{esc(item)}</li>" for item in standards)}</ul><h2>Traffic approach</h2><ul>{channels}</ul><h2>Partner fit</h2><p>Future direct affiliate programs should fit the audience, allow clear disclosure, and support self-serve transactions without creating a customer-support queue for this site.</p></article>'
+    write_page(out, "publisher-standards/index.html", layout(site, affiliate, "Publisher Standards", "Affiliate publisher standards and no-cost traffic approach.", "publisher-standards/index.html", body, schema_base(site, "Publisher Standards", "Affiliate publisher standards.", "publisher-standards/index.html", "WebPage")))
+
+
+def feed_xml(site, items):
+    updated = date.today().isoformat()
+    entries = []
+    for item in items[:50]:
+        url = absolute(site["base_url"], item["path"].replace("index.html", ""))
+        entries.append(f'<entry><title>{esc(item["title"])}</title><link href="{esc(url)}"/><id>{esc(url)}</id><updated>{updated}</updated><summary>{esc(item["description"])}</summary></entry>')
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>{esc(site["name"])} updates</title>
+<link href="{esc(site["base_url"].rstrip("/") + "/feed.xml")}" rel="self"/>
+<link href="{esc(site["base_url"].rstrip("/") + "/")}"/>
+<updated>{updated}</updated>
+<id>{esc(site["base_url"].rstrip("/") + "/")}</id>
+{''.join(entries)}
+</feed>
+"""
+
 def build_sitemap(out, site, paths):
     today = site["launch_date"] or date.today().isoformat()
     urls = []
@@ -406,25 +480,33 @@ def main():
         shutil.rmtree(out)
     out.mkdir(parents=True)
 
-    site, affiliate, automation, sources, tools, guides, recommendations = load_all()
+    site, affiliate, automation, sources, tools, guides, recommendations, editorial = load_all()
     site["base_url"] = os.environ.get("SITE_BASE_URL", site["base_url"]).rstrip("/")
 
     copy_assets(out)
-    build_home(out, site, affiliate, tools, guides)
+    build_home(out, site, affiliate, tools, guides, editorial)
     build_tool_index(out, site, affiliate, tools)
     for tool in tools:
         build_tool(out, site, affiliate, tool, sources, recommendations)
     build_guide_index(out, site, affiliate, guides)
     for guide in guides:
         build_guide(out, site, affiliate, guide, sources, recommendations, tools)
+    build_start_here(out, site, affiliate, tools, guides, editorial)
+    build_seasonal_pages(out, site, affiliate, editorial, tools, guides, recommendations)
+    build_publisher_standards(out, site, affiliate, editorial)
     build_static_pages(out, site, affiliate)
     if args.automation_report and Path(args.automation_report).exists():
         shutil.copyfile(args.automation_report, out / "automation-report.json")
+    feed_items = [{"title": site["name"], "description": site["description"], "path": "index.html"}]
+    feed_items += [{"title": t["title"], "description": t["description"], "path": f'tools/{t["slug"]}/index.html'} for t in tools]
+    feed_items += [{"title": e["title"], "description": e["description"], "path": f'seasonal/{e["slug"]}/index.html'} for e in editorial.get("seasonal_pages", [])]
+    feed_items += [{"title": g["title"], "description": g["description"], "path": f'guides/{g["slug"]}/index.html'} for g in guides[:20]]
+    write_page(out, "feed.xml", feed_xml(site, feed_items))
     paths = [str(p.relative_to(out)).replace("\\", "/") for p in out.rglob("*.html")]
     build_sitemap(out, site, paths)
     build_robots(out, site)
     copy_static_root_files(out)
-    print(json.dumps({"out": str(out), "tools": len(tools), "guides": len(guides), "html_pages": len(paths)}, indent=2))
+    print(json.dumps({"out": str(out), "tools": len(tools), "guides": len(guides), "seasonal_pages": len(editorial.get("seasonal_pages", [])), "html_pages": len(paths)}, indent=2))
 
 
 if __name__ == "__main__":

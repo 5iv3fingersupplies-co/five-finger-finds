@@ -26,9 +26,31 @@ class SiteBuildTest(unittest.TestCase):
 
     def test_generated_pages_exist(self):
         html_pages = list((ROOT / "site").rglob("*.html"))
-        self.assertGreaterEqual(len(html_pages), 40)
+        self.assertGreaterEqual(len(html_pages), 54)
         self.assertTrue((ROOT / "site/tools/portable-air-pump-selector/index.html").exists())
         self.assertTrue((ROOT / "site/guides/household-emergency-kit-without-clutter/index.html").exists())
+        self.assertTrue((ROOT / "site/start-here/index.html").exists())
+        self.assertTrue((ROOT / "site/seasonal/index.html").exists())
+        self.assertTrue((ROOT / "site/publisher-standards/index.html").exists())
+        self.assertTrue((ROOT / "site/feed.xml").exists())
+        self.assertTrue((ROOT / "site/start-here/index.html").exists())
+        self.assertTrue((ROOT / "site/seasonal/index.html").exists())
+        self.assertTrue((ROOT / "site/publisher-standards/index.html").exists())
+        self.assertTrue((ROOT / "site/feed.xml").exists())
+        self.assertTrue((ROOT / "site/start-here/index.html").exists())
+        self.assertTrue((ROOT / "site/seasonal/index.html").exists())
+        self.assertTrue((ROOT / "site/publisher-standards/index.html").exists())
+        self.assertTrue((ROOT / "site/feed.xml").exists())
+        self.assertTrue((ROOT / "site/start-here/index.html").exists())
+        self.assertTrue((ROOT / "site/seasonal/index.html").exists())
+        self.assertTrue((ROOT / "site/publisher-standards/index.html").exists())
+        self.assertTrue((ROOT / "site/feed.xml").exists())
+
+    def test_editorial_calendar(self):
+        editorial = json.loads((ROOT / "data/editorial_calendar.json").read_text(encoding="utf-8"))
+        self.assertGreaterEqual(len(editorial["seasonal_pages"]), 12)
+        self.assertGreaterEqual(len(editorial["traffic_channels"]), 3)
+        self.assertIn("<feed", (ROOT / "site/feed.xml").read_text(encoding="utf-8"))
 
     def test_monetization_uses_supplied_public_tag(self):
         affiliate = json.loads((ROOT / "data/affiliate.json").read_text(encoding="utf-8"))
@@ -49,6 +71,8 @@ class SiteBuildTest(unittest.TestCase):
         self.assertFalse(report["cost"]["paid_apis_used"])
         self.assertGreaterEqual(len(report["top_page_actions"]), 10)
         self.assertGreaterEqual(len(report["content_gap_actions"]), 5)
+        self.assertGreaterEqual(report["site"]["seasonal_pages"], 12)
+        self.assertIn("source_strategy_actions", report)
 
 
 if __name__ == "__main__":
